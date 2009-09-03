@@ -1,0 +1,23 @@
+## Title: Faction Transfer Analyzer
+## Notes: Assist you with faction transfers letting you know which mounts, spells, etc you have and what they will be swapped to.
+
+## Author: Ackis
+## eMail: ackis AT shaw DOT ca
+## X-Donate: http://www.wowace.com/projects/faction-transfer-analyzer/#w_donations
+
+## Interface: 30200
+## Version: 0.1
+## X-Revision: @project-revision@
+## X-Date: @file-date-iso@
+
+## X-Localizations: enUS
+
+## OptionalDeps: Ace3, LibAboutPanel, LibBabble-Faction-3.0
+## DefaultState: Enabled
+
+#@no-lib-strip@
+# Libraries
+embeds.xml
+#@end-no-lib-strip@
+
+FactionTransferAnalyzer.lua
