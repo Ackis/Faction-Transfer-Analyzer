@@ -52,20 +52,20 @@ end
 
 local FACTION_DEFAULT_HORDE = {
 	[68] = 69, -- UC -> Darn
-	[530] = 47, -- Darkspear -> IF
 	[76] = 72, -- Org -> Stormwind
-	[911] = 930, -- Silvermoon -> Exodar
 	[81] = 54, -- TB -> Gnomergan
-	[729] = 730, -- Frostwolf -> Stormpike
-	[947] = 946, -- Thrallmar -> Honor Hold
-	[941] = 978, -- Mag'har  -> Kurenai
-	[922] = nil, -- Tranquillen -> nil
-	[1052] = 1037, -- Horde Exp -> Alliance Vanguard
 	[510] = 509, -- Defilers -> Arathor
+	[530] = 47, -- Darkspear -> IF
+	[729] = 730, -- Frostwolf -> Stormpike
+	[889] = 890, -- Warsong Outriders -> Silverwing
+	[911] = 930, -- Silvermoon -> Exodar
+	[922] = nil, -- Tranquillen -> nil
+	[941] = 978, -- Mag'har  -> Kurenai
+	[947] = 946, -- Thrallmar -> Honor Hold
+	[1052] = 1037, -- Horde Exp -> Alliance Vanguard
+	[1064] = 1068, -- Taunka -> Explorer's League
 	[1067] = 1126, -- Hand -> Frostborn
 	[1085] = 1050,-- Warsong Offensive -> Valiance
-	[889] = 890, -- Warsong Outriders -> Silverwing
-	[1064] = 1068, -- Taunka -> Explorer's League
 }
 
 do
