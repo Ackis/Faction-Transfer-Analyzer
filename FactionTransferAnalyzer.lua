@@ -56,6 +56,7 @@ function addon:OnInitialize()
 
 end
 
+-- Horde factions which change based on the race combination
 local FACTION_CHANGE_HORDE = {
 	[BFAC["Undercity"]] = BFAC["Darnassus"],
 	[BFAC["Orgrimmar"]] = BFAC["Stormwind"],
@@ -64,7 +65,7 @@ local FACTION_CHANGE_HORDE = {
 	[BFAC["Silvermoon City"]] = BFAC["Exodar"],
 }
 
--- Default factions which always translate
+-- Default Horde factions which always translate
 local FACTION_DEFAULT_HORDE = {
 	[BFAC["The Defilers"]] = BFAC["The League of Arathor"],
 	[BFAC["Tranquillien"]] = 0,
@@ -86,6 +87,7 @@ local FACTION_CHANGE_ALLIANCE = {
 	[BFAC["Exodar"]] = BFAC["Silvermoon City"],
 }
 
+-- Default Alliance factions which always translate
 local FACTION_DEFAULT_ALLIANCE = {
 	[BFAC["Wintersaber Trainers"]] = 0,
 	[BFAC["The League of Arathor"]] = BFAC["The Defilers"],
@@ -145,20 +147,23 @@ do
 
 end -- end-do
 
-function addon:ParseReps(RepTable, ParseTable)
+function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable)
 
 	local t = {}
 
-	-- Parse all the found reps
+	-- Parse all the reps that we have
 	for name, replevel in pairs(RepTable) do
-		self:Print(name)
-		-- If there's a conversion add it to our output
-		if (ParseTable[name]) then
-			if (ParseTable[name] == 0) then
+		-- Factions which always have a 1-1 translation
+		if (DefaultFactionTable[name]) then
+			if (DefaultFactionTable[name] == 0) then
 				tinsert(t,"- " .. name .. " -> Removed")
 			else
-				tinsert(t,"* " .. name .. " -> " .. ParseTable[name])
+				tinsert(t,"* " .. name .. " -> " .. DefaultFactionTable[name])
 			end
+		-- Factions that translate based on which race you are transitioning to
+		-- Only will deal with default right now
+		elseif (ChangeFactionTable[name]) then
+				tinsert(t,"* " .. name .. " -> " .. DefaultFactionTable[name])
 		end
 	end
 
@@ -168,9 +173,16 @@ end
 
 function addon:ScanCharacter()
 
+	playerFaction = UnitFactionGroup("player")
+
 	local RepTable = {}
 
 	self:ScanFactions(RepTable)
-	self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE))
+
+	if (playerFaction == "Horde") then
+		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE))
+	else
+		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE))
+	end
 
 end
