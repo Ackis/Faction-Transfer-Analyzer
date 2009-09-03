@@ -140,7 +140,7 @@ do
 
 end -- end-do
 
-local function ParseReps(RepTable, ParseTable)
+function addon:ParseReps(RepTable, ParseTable)
 
 	local t = {}
 
@@ -165,6 +165,6 @@ function addon:ScanCharacter()
 	local RepTable = {}
 
 	self:ScanFactions(RepTable)
-	self:Print(ParseReps(RepTable, FACTION_DEFAULT_HORDE))
+	self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE))
 
 end
