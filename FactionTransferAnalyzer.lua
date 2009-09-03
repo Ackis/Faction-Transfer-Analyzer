@@ -163,7 +163,7 @@ function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable)
 		-- Factions that translate based on which race you are transitioning to
 		-- Only will deal with default right now
 		elseif (ChangeFactionTable[name]) then
-				tinsert(t,"* " .. name .. " -> " .. DefaultFactionTable[name])
+				tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[name])
 		end
 	end
 
