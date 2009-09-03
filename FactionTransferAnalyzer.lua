@@ -155,9 +155,9 @@ function addon:ParseReps(RepTable, ParseTable)
 		-- If there's a conversion add it to our output
 		if (ParseTable[name]) then
 			if (ParseTable[name] == 0) then
-				tinsert(t,"- " .. name " -> Removed")
+				tinsert(t,"- " .. name .. " -> Removed")
 			else
-				tinsert(t,"* " .. name " -> " .. ParseTable[name])
+				tinsert(t,"* " .. name .. " -> " .. ParseTable[name])
 			end
 		end
 	end
