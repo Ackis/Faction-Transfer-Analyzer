@@ -109,10 +109,6 @@ do
 
 	function addon:ScanFactions(RepTable)
 
-		-- Bug here when I reload UI
-		if (not RepTable) then
-			return
-		end
 		twipe(rep_list)
 
 		-- Number of factions before we expand
