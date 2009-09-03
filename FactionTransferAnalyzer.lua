@@ -52,7 +52,7 @@ local twipe = table.wipe
 function addon:OnInitialize()
 
 	-- Create slash commands
-	self:RegisterChatCommand("fta", "ScanCharacter")
+	self:RegisterChatCommand("fta", "SlashHandler")
 
 end
 
@@ -171,7 +171,7 @@ function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable)
 
 end
 
-function addon:ScanCharacter()
+function addon:ScanCharacter(TFaction, OFaction)
 
 	playerFaction = UnitFactionGroup("player")
 
@@ -183,6 +183,32 @@ function addon:ScanCharacter()
 		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE))
 	else
 		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE))
+	end
+
+end
+
+function addon:SlashHandler(input)
+
+	local lower = string.lower(input)
+
+	if (not lower) or (lower and lower:trim() == "") then
+		self:Print("Error, correct usage is: /tfa <Transfer Race> <Original Race (Optional)>")
+		self:Print("
+	elseif (lower == "help") then
+		local helptext = [[Faction Transfer Analyzer:
+Assists with transfering your characters faction by letting you know which reputations, mounts, and spells you will have transfered or lose.
+Usage: /tfa <Transfer Race> <Original Race (Optional)>
+If Original Race is not specified it will use your characters current race.
+Acceptible races are: Orc, Troll, Tauren, BloodElf, Undead, Gnome, Human, NightElf, Draeni, Dwarf
+]]
+		self:Print(helptext)
+	else
+		local TFaction, OFaction = string.match(lower, "(%a+)%s(%w*)")
+		if (not TFaction) then
+			self:Print("Error, you must specify which race you will be transferring to.")
+		else
+			self:ScanCharacter(TFaction, OFaction)
+		end
 	end
 
 end
