@@ -74,7 +74,7 @@ local FACTION_DEFAULT_HORDE = {
 	[BFAC["The Mag'har"]] = BFAC["Kurenai"],
 	[BFAC["Thrallmar"]] = BFAC["Honor Hold"],
 	[BFAC["Horde Expedition"]] = BFAC["Alliance Vanguard"],
-	[BFAC["The Taunka"]] = BFAC["Explorers League"],
+	[BFAC["The Taunka"]] = BFAC["Explorers' League"],
 	[BFAC["The Hand of Vengeance"]] = BFAC["The Frostborn"],
 	[BFAC["Warsong Offensive"]] = BFAC["Valiance Expedition"],
 }
@@ -82,7 +82,7 @@ local FACTION_DEFAULT_HORDE = {
 local FACTION_CHANGE_ALLIANCE = {
 	[BFAC["Darnassus"]] = BFAC["Undercity"],
 	[BFAC["Stormwind"]] = BFAC["Orgrimmar"],
-	[BFAC["Gnomergan Exiles"]] = BFAC["Thunder Bluff"],
+	[BFAC["Gnomeregan Exiles"]] = BFAC["Thunder Bluff"],
 	[BFAC["Ironforge"]] = BFAC["Darkspear Trolls"],
 	[BFAC["Exodar"]] = BFAC["Silvermoon City"],
 }
@@ -96,7 +96,7 @@ local FACTION_DEFAULT_ALLIANCE = {
 	[BFAC["Kurenai"]] = BFAC["The Mag'har"],
 	[BFAC["Honor Hold"]] = BFAC["Thrallmar"],
 	[BFAC["Alliance Vanguard"]] = BFAC["Horde Expedition"],
-	[BFAC["Explorer's League"]] = BFAC["The Taunka"],
+	[BFAC["Explorers' League"]] = BFAC["The Taunka"],
 	[BFAC["The Frostborn"]] = BFAC["The Hand of Vengeance"],
 	[BFAC["Valiance Expedition"]] = BFAC["Warsong Offensive"],
 }
