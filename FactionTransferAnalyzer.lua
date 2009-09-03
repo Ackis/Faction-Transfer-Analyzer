@@ -211,7 +211,6 @@ function addon:SlashHandler(input)
 
 	if (not lower) or (lower and lower:trim() == "") then
 		self:Print("Error, correct usage is: /tfa <Transfer Race> <Original Race (Optional)>")
-		self:Print("
 	elseif (lower == "help") then
 		local helptext = [[Faction Transfer Analyzer:
 Assists with transfering your characters faction by letting you know which reputations, mounts, and spells you will have transfered or lose.
