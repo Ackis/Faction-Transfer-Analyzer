@@ -146,6 +146,7 @@ function addon:ParseReps(RepTable, ParseTable)
 
 	-- Parse all the found reps
 	for name, replevel in pairs(RepTable) do
+		self:Print(name)
 		-- If there's a conversion add it to our output
 		if (ParseTable[name]) then
 			if (ParseTable[name] == 0) then
