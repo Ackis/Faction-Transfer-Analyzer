@@ -58,17 +58,17 @@ end
 local FACTION_DEFAULT_HORDE = {
 	[BFAC["Undercity"]] = BFAC["Darnassus"],
 	[BFAC["Orgrimmar"]] = BFAC["Stormwind"],
-	[BFAC["Thunder Bluff"]] = BFAC["Gnomergan Exiles"],
+	[BFAC["Thunder Bluff"]] = BFAC["Gnomeregan Exiles"],
 	[BFAC["The Defilers"]] = BFAC["The League of Arathor"],
 	[BFAC["Darkspear Trolls"]] = BFAC["Ironforge"],
-	[BFAC["Tranquillen"]] = 0,
+	[BFAC["Tranquillien"]] = 0,
 	[BFAC["Frostwolf Clan"]] = BFAC["Stormpike Guard"],
 	[BFAC["Warsong Outriders"]] = BFAC["Silverwing Sentinels"],
 	[BFAC["Silvermoon City"]] = BFAC["Exodar"],
 	[BFAC["The Mag'har"]] = BFAC["Kurenai"],
 	[BFAC["Thrallmar"]] = BFAC["Honor Hold"],
 	[BFAC["Horde Expedition"]] = BFAC["Alliance Vanguard"],
-	[BFAC["The Taunka"]] = BFAC["Explorer's League"],
+	[BFAC["The Taunka"]] = BFAC["Explorers League"],
 	[BFAC["The Hand of Vengeance"]] = BFAC["The Frostborn"],
 	[BFAC["Warsong Offensive"]] = BFAC["Valiance Expedition"],
 }
@@ -79,7 +79,6 @@ local FACTION_DEFAULT_ALLIANCE = {
 	[BFAC["Thunder Bluff"]] = BFAC["Gnomergan Exiles"],
 	[BFAC["The Defilers"]] = BFAC["The League of Arathor"],
 	[BFAC["Darkspear Trolls"]] = BFAC["Ironforge"],
-	[BFAC["Tranquillen"]] = 0,
 	[BFAC["Frostwolf Clan"]] = BFAC["Stormpike Guard"],
 	[BFAC["Warsong Outriders"]] = BFAC["Silverwing Sentinels"],
 	[BFAC["Silvermoon City"]] = BFAC["Exodar"],
@@ -166,6 +165,6 @@ function addon:ScanCharacter()
 	local RepTable = {}
 
 	self:ScanFactions(RepTable)
-	self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE))
+	self:Print(ParseReps(RepTable, FACTION_DEFAULT_HORDE))
 
 end
