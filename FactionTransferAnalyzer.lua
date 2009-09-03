@@ -46,6 +46,7 @@ local BFAC = LibStub("LibBabble-Faction-3.0"):GetLookupTable()
 
 local tinsert = table.insert
 local tconcat = table.concat
+local twipe = table.wipe
 
 function addon:OnInitialize()
 
@@ -55,6 +56,24 @@ function addon:OnInitialize()
 end
 
 local FACTION_DEFAULT_HORDE = {
+	[BFAC["Undercity"]] = BFAC["Darnassus"],
+	[BFAC["Orgrimmar"]] = BFAC["Stormwind"],
+	[BFAC["Thunder Bluff"]] = BFAC["Gnomergan Exiles"],
+	[BFAC["The Defilers"]] = BFAC["The League of Arathor"],
+	[BFAC["Darkspear Trolls"]] = BFAC["Ironforge"],
+	[BFAC["Tranquillen"]] = 0,
+	[BFAC["Frostwolf Clan"]] = BFAC["Stormpike Guard"],
+	[BFAC["Warsong Outriders"]] = BFAC["Silverwing Sentinels"],
+	[BFAC["Silvermoon City"]] = BFAC["Exodar"],
+	[BFAC["The Mag'har"]] = BFAC["Kurenai"],
+	[BFAC["Thrallmar"]] = BFAC["Honor Hold"],
+	[BFAC["Horde Expedition"]] = BFAC["Alliance Vanguard"],
+	[BFAC["The Taunka"]] = BFAC["Explorer's League"],
+	[BFAC["The Hand of Vengeance"]] = BFAC["The Frostborn"],
+	[BFAC["Warsong Offensive"]] = BFAC["Valiance Expedition"],
+}
+
+local FACTION_DEFAULT_ALLIANCE = {
 	[BFAC["Undercity"]] = BFAC["Darnassus"],
 	[BFAC["Orgrimmar"]] = BFAC["Stormwind"],
 	[BFAC["Thunder Bluff"]] = BFAC["Gnomergan Exiles"],
