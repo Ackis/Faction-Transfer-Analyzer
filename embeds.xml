@@ -17,6 +17,7 @@
 
 <!--Libraries-->
 <Include file="libs\LibBabble-Faction-3.0\lib.xml"/>
+<Include file="libs\LibBabble-Race-3.0\lib.xml"/>
 <Include file="libs\LibAboutPanel\lib.xml"/>
 
 </Ui>

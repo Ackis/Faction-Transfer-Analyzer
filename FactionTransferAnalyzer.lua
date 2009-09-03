@@ -43,6 +43,7 @@ FTA = FactionTransferAnalyzer
 local addon = LibStub("AceAddon-3.0"):GetAddon(MODNAME)
 --local L	= LibStub("AceLocale-3.0"):GetLocale(MODNAME)
 local BFAC = LibStub("LibBabble-Faction-3.0"):GetLookupTable()
+local BRACE = LibStub("LibBabble-Race-3.0"):GetLookupTable()
 
 local tinsert = table.insert
 local tconcat = table.concat
@@ -55,16 +56,20 @@ function addon:OnInitialize()
 
 end
 
-local FACTION_DEFAULT_HORDE = {
+local FACTION_CHANGE_HORDE = {
 	[BFAC["Undercity"]] = BFAC["Darnassus"],
 	[BFAC["Orgrimmar"]] = BFAC["Stormwind"],
 	[BFAC["Thunder Bluff"]] = BFAC["Gnomeregan Exiles"],
-	[BFAC["The Defilers"]] = BFAC["The League of Arathor"],
 	[BFAC["Darkspear Trolls"]] = BFAC["Ironforge"],
+	[BFAC["Silvermoon City"]] = BFAC["Exodar"],
+}
+
+-- Default factions which always translate
+local FACTION_DEFAULT_HORDE = {
+	[BFAC["The Defilers"]] = BFAC["The League of Arathor"],
 	[BFAC["Tranquillien"]] = 0,
 	[BFAC["Frostwolf Clan"]] = BFAC["Stormpike Guard"],
 	[BFAC["Warsong Outriders"]] = BFAC["Silverwing Sentinels"],
-	[BFAC["Silvermoon City"]] = BFAC["Exodar"],
 	[BFAC["The Mag'har"]] = BFAC["Kurenai"],
 	[BFAC["Thrallmar"]] = BFAC["Honor Hold"],
 	[BFAC["Horde Expedition"]] = BFAC["Alliance Vanguard"],
