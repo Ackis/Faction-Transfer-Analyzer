@@ -147,8 +147,27 @@ do
 
 end -- end-do
 
-function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable, ORace, TRace)
+local RaceListHorde = {
+	[string.lower(BRACE["Orc"])] = BFAC["Orgrimmar"],
+	[string.lower(BRACE["Troll"])] = BFAC["Darkspear Trolls"],
+	[string.lower(BRACE["Undead"])] = BFAC["Undercity"],
+	[string.lower(BRACE["Tauren"])] = BFAC["Thunder Bluff"],
+	[string.gsub(string.lower(BRACE["Blood Elf"]), " ", "")] = BFAC["Silvermoon City"],
+	["be"] = BFAC["Silvermoon City"], -- People are lazy and BloodElf is too long to type
+}
 
+local RaceListAlliance = {
+	[string.lower(BRACE["Human"])] = BFAC["Stormwind"],
+	[string.lower(BRACE["Gnome"])] = BFAC["Gnomeregan Exiles"],
+	[string.lower(BRACE["Dwarf"])] = BFAC["Ironforge"],
+	[string.lower(BRACE["Draeni"])] = BFAC["Exodar"],
+	[string.gsub(string.lower(BRACE["Night Elf"]), " ", "")] = BFAC["Darnassus"],
+	["ne"] = BFAC["Darnassus"], -- People are lazy and NightElf is too long to type
+}
+
+function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable, ORace, TRace, RaceTable)
+self:Print("Current race: " .. ORace)
+self:Print("Target race: " .. TRace)
 	local t = {}
 
 	-- Parse all the reps that we have
@@ -163,7 +182,12 @@ function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable, ORac
 		-- Factions that translate based on which race you are transitioning to
 		-- Only will deal with default right now
 		elseif (ChangeFactionTable[name]) then
-			tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[name])
+			if (name ~= RaceTable[ORace]) then
+				tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[name])
+			else
+				self:Print(RaceTable[ORace])
+				tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[RaceTable[TRace]])
+			end
 		end
 	end
 
@@ -186,24 +210,6 @@ function addon:ScanCharacter(TRace, ORace)
 	end
 
 end
-
-local RaceListHorde = {
-	[string.lower(BRACE["Orc"])],
-	[string.lower(BRACE["Troll"])],
-	[string.lower(BRACE["Undead"])],
-	[string.lower(BRACE["Tauren"])],
-	[string.gsub(string.lower(BRACE["Blood Elf"]), " ", "")],
-	["be"], -- People are lazy and BloodElf is too long to type
-}
-
-local RaceListAlliance = {
-	[string.lower(BRACE["Human"])],
-	[string.lower(BRACE["Gnome"])],
-	[string.lower(BRACE["Dwarf"])],
-	[string.lower(BRACE["Draeni"])],
-	[string.gsub(string.lower(BRACE["Night Elf"]), " ", "")],
-	["ne"], -- People are lazy and NightElf is too long to type
-}
 
 function addon:SlashHandler(input)
 
