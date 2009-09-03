@@ -61,17 +61,15 @@ local FACTION_DEFAULT_HORDE = {
 	[BFAC["The Defilers"]] = BFAC["The League of Arathor"],
 	[BFAC["Darkspear Trolls"]] = BFAC["Ironforge"],
 	[BFAC["Tranquillen"]] = 0,
---[[
-	[729] = 730, -- Frostwolf -> Stormpike
-	[889] = 890, -- Warsong Outriders -> Silverwing
-	[911] = 930, -- Silvermoon -> Exodar
-	[941] = 978, -- Mag'har  -> Kurenai
-	[947] = 946, -- Thrallmar -> Honor Hold
-	[1052] = 1037, -- Horde Exp -> Alliance Vanguard
-	[1064] = 1068, -- Taunka -> Explorer's League
-	[1067] = 1126, -- Hand -> Frostborn
-	[1085] = 1050, -- Warsong Offensive -> Valiance
-]]--
+	[BFAC["Frostwolf Clan"]] = BFAC["Stormpike Guard"],
+	[BFAC["Warsong Outriders"]] = BFAC["Silverwing Sentinels"],
+	[BFAC["Silvermoon City"]] = BFAC["Exodar"],
+	[BFAC["The Mag'har"]] = BFAC["Kurenai"],
+	[BFAC["Thrallmar"]] = BFAC["Honor Hold"],
+	[BFAC["Horde Expedition"]] = BFAC["Alliance Vanguard"],
+	[BFAC["The Taunka"]] = BFAC["Explorer's League"],
+	[BFAC["The Hand of Vengeance"]] = BFAC["The Frostborn"],
+	[BFAC["Warsong Offensive"]] = BFAC["Valiance Expedition"],
 }
 
 do
