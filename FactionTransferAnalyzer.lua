@@ -187,6 +187,24 @@ function addon:ScanCharacter(TFaction, OFaction)
 
 end
 
+local RaceListHorde = {
+	[string.lower(BRACE["Orc"])],
+	[string.lower(BRACE["Troll"])],
+	[string.lower(BRACE["Undead"])],
+	[string.lower(BRACE["Tauren"])],
+	[string.gsub(string.lower(BRACE["Blood Elf"]), " ", "")],
+	["be"], -- People are lazy and BloodElf is too long to type
+}
+
+local RaceListAlliance = {
+	[string.lower(BRACE["Human"])],
+	[string.lower(BRACE["Gnome"])],
+	[string.lower(BRACE["Dwarf"])],
+	[string.lower(BRACE["Draeni"])],
+	[string.gsub(string.lower(BRACE["Night Elf"]), " ", "")],
+	["ne"], -- People are lazy and NightElf is too long to type
+}
+
 function addon:SlashHandler(input)
 
 	local lower = string.lower(input)
@@ -207,7 +225,15 @@ Acceptible races are: Orc, Troll, Tauren, BloodElf, Undead, Gnome, Human, NightE
 		if (not TFaction) then
 			self:Print("Error, you must specify which race you will be transferring to.")
 		else
-			self:ScanCharacter(TFaction, OFaction)
+			if (not OFaction) then
+				OFaction = string.gsub(string.lower(UnitRace("player")), " ", "")
+			end
+			if ((RaceListHorde[TFaction]) and (RaceListHorde[OFaction])) or
+			((RaceListAlliance[TFaction]) and (RaceListAlliance[OFaction])) then
+				self:Print("Error, this transfer is not currently possible (Transfers must be from one faction to the other only).")
+			else
+				self:ScanCharacter(TFaction, OFaction)
+			end
 		end
 	end
 
