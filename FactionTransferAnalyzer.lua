@@ -147,7 +147,7 @@ do
 
 end -- end-do
 
-function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable)
+function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable, ORace, TRace)
 
 	local t = {}
 
@@ -163,7 +163,7 @@ function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable)
 		-- Factions that translate based on which race you are transitioning to
 		-- Only will deal with default right now
 		elseif (ChangeFactionTable[name]) then
-				tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[name])
+			tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[name])
 		end
 	end
 
@@ -171,7 +171,7 @@ function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable)
 
 end
 
-function addon:ScanCharacter(TFaction, OFaction)
+function addon:ScanCharacter(TRace, ORace)
 
 	playerFaction = UnitFactionGroup("player")
 
@@ -180,9 +180,9 @@ function addon:ScanCharacter(TFaction, OFaction)
 	self:ScanFactions(RepTable)
 
 	if (playerFaction == "Horde") then
-		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE))
+		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, ORace, TRace))
 	else
-		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE))
+		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE, ORace, TRace))
 	end
 
 end
