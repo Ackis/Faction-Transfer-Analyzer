@@ -160,7 +160,7 @@ local RaceListAlliance = {
 	[string.lower(BRACE["Human"])] = BFAC["Stormwind"],
 	[string.lower(BRACE["Gnome"])] = BFAC["Gnomeregan Exiles"],
 	[string.lower(BRACE["Dwarf"])] = BFAC["Ironforge"],
-	[string.lower(BRACE["Draeni"])] = BFAC["Exodar"],
+	[string.lower(BRACE["Draenei"])] = BFAC["Exodar"],
 	[string.gsub(string.lower(BRACE["Night Elf"]), " ", "")] = BFAC["Darnassus"],
 	["ne"] = BFAC["Darnassus"], -- People are lazy and NightElf is too long to type
 }
@@ -222,7 +222,7 @@ function addon:SlashHandler(input)
 Assists with transfering your characters faction by letting you know which reputations, mounts, and spells you will have transfered or lose.
 Usage: /tfa <Transfer Race> <Original Race (Optional)>
 If Original Race is not specified it will use your characters current race.
-Acceptible races are: Orc, Troll, Tauren, BloodElf, Undead, Gnome, Human, NightElf, Draeni, Dwarf
+Acceptible races are: Orc, Troll, Tauren, BloodElf, Undead, Gnome, Human, NightElf, Draenei, Dwarf
 ]]
 		self:Print(helptext)
 	else
