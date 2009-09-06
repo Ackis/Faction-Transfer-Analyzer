@@ -56,51 +56,6 @@ function addon:OnInitialize()
 
 end
 
--- Horde factions which change based on the race combination
-local FACTION_CHANGE_HORDE = {
-	[BFAC["Undercity"]] = BFAC["Darnassus"],
-	[BFAC["Orgrimmar"]] = BFAC["Stormwind"],
-	[BFAC["Thunder Bluff"]] = BFAC["Gnomeregan Exiles"],
-	[BFAC["Darkspear Trolls"]] = BFAC["Ironforge"],
-	[BFAC["Silvermoon City"]] = BFAC["Exodar"],
-}
-
--- Default Horde factions which always translate
-local FACTION_DEFAULT_HORDE = {
-	[BFAC["The Defilers"]] = BFAC["The League of Arathor"],
-	[BFAC["Tranquillien"]] = 0,
-	[BFAC["Frostwolf Clan"]] = BFAC["Stormpike Guard"],
-	[BFAC["Warsong Outriders"]] = BFAC["Silverwing Sentinels"],
-	[BFAC["The Mag'har"]] = BFAC["Kurenai"],
-	[BFAC["Thrallmar"]] = BFAC["Honor Hold"],
-	[BFAC["Horde Expedition"]] = BFAC["Alliance Vanguard"],
-	[BFAC["The Taunka"]] = BFAC["Explorers' League"],
-	[BFAC["The Hand of Vengeance"]] = BFAC["The Frostborn"],
-	[BFAC["Warsong Offensive"]] = BFAC["Valiance Expedition"],
-}
-
-local FACTION_CHANGE_ALLIANCE = {
-	[BFAC["Darnassus"]] = BFAC["Undercity"],
-	[BFAC["Stormwind"]] = BFAC["Orgrimmar"],
-	[BFAC["Gnomeregan Exiles"]] = BFAC["Thunder Bluff"],
-	[BFAC["Ironforge"]] = BFAC["Darkspear Trolls"],
-	[BFAC["Exodar"]] = BFAC["Silvermoon City"],
-}
-
--- Default Alliance factions which always translate
-local FACTION_DEFAULT_ALLIANCE = {
-	[BFAC["Wintersaber Trainers"]] = 0,
-	[BFAC["The League of Arathor"]] = BFAC["The Defilers"],
-	[BFAC["Stormpike Guard"]] = BFAC["Frostwolf Clan"],
-	[BFAC["Silverwing Sentinels"]] = BFAC["Warsong Outriders"],
-	[BFAC["Kurenai"]] = BFAC["The Mag'har"],
-	[BFAC["Honor Hold"]] = BFAC["Thrallmar"],
-	[BFAC["Alliance Vanguard"]] = BFAC["Horde Expedition"],
-	[BFAC["Explorers' League"]] = BFAC["The Taunka"],
-	[BFAC["The Frostborn"]] = BFAC["The Hand of Vengeance"],
-	[BFAC["Valiance Expedition"]] = BFAC["Warsong Offensive"],
-}
-
 do
 
 	local GetNumFactions = GetNumFactions
@@ -147,110 +102,159 @@ do
 
 end -- end-do
 
-function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable, OFaction, TFaction)
-self:Print("Current race: " .. OFaction)
-self:Print("Target race: " .. TFaction)
-	local t = {}
+do
 
-	-- Parse all the reps that we have
-	for name, replevel in pairs(RepTable) do
-		-- Factions which always have a 1-1 translation
-		if (DefaultFactionTable[name]) then
-			if (DefaultFactionTable[name] == 0) then
-				tinsert(t,"- " .. name .. " -> Removed")
-			else
-				tinsert(t,"* " .. name .. " -> " .. DefaultFactionTable[name])
-			end
-		-- Factions that translate based on which race you are transitioning to
-		-- Only will deal with default right now
-		elseif (ChangeFactionTable[name]) then
-			if (name == OFaction) then
-				tinsert(t,"* " .. name .. " -> " .. TFaction)
-			elseif (ChangeFactionTable[name] == TFaction) then
-				tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[OFaction])
-			else
-				tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[name])
-			end
-		end
-	end
+	-- Horde factions which change based on the race combination
+	local FACTION_CHANGE_HORDE = {
+		[BFAC["Undercity"]] = BFAC["Darnassus"],
+		[BFAC["Orgrimmar"]] = BFAC["Stormwind"],
+		[BFAC["Thunder Bluff"]] = BFAC["Gnomeregan Exiles"],
+		[BFAC["Darkspear Trolls"]] = BFAC["Ironforge"],
+		[BFAC["Silvermoon City"]] = BFAC["Exodar"],
+	}
 
-	return tconcat(t,"\n")
+	-- Default Horde factions which always translate
+	local FACTION_DEFAULT_HORDE = {
+		[BFAC["The Defilers"]] = BFAC["The League of Arathor"],
+		[BFAC["Tranquillien"]] = 0,
+		[BFAC["Frostwolf Clan"]] = BFAC["Stormpike Guard"],
+		[BFAC["Warsong Outriders"]] = BFAC["Silverwing Sentinels"],
+		[BFAC["The Mag'har"]] = BFAC["Kurenai"],
+		[BFAC["Thrallmar"]] = BFAC["Honor Hold"],
+		[BFAC["Horde Expedition"]] = BFAC["Alliance Vanguard"],
+		[BFAC["The Taunka"]] = BFAC["Explorers' League"],
+		[BFAC["The Hand of Vengeance"]] = BFAC["The Frostborn"],
+		[BFAC["Warsong Offensive"]] = BFAC["Valiance Expedition"],
+	}
 
-end
+	local FACTION_CHANGE_ALLIANCE = {
+		[BFAC["Darnassus"]] = BFAC["Undercity"],
+		[BFAC["Stormwind"]] = BFAC["Orgrimmar"],
+		[BFAC["Gnomeregan Exiles"]] = BFAC["Thunder Bluff"],
+		[BFAC["Ironforge"]] = BFAC["Darkspear Trolls"],
+		[BFAC["Exodar"]] = BFAC["Silvermoon City"],
+	}
 
-local RaceListHorde = {
-	[string.lower(BRACE["Orc"])] = BFAC["Orgrimmar"],
-	[string.lower(BRACE["Troll"])] = BFAC["Darkspear Trolls"],
-	[string.lower(BRACE["Undead"])] = BFAC["Undercity"],
-	[string.lower(BRACE["Tauren"])] = BFAC["Thunder Bluff"],
-	[string.gsub(string.lower(BRACE["Blood Elf"]), " ", "")] = BFAC["Silvermoon City"],
-	["be"] = BFAC["Silvermoon City"], -- People are lazy and BloodElf is too long to type
-}
+	-- Default Alliance factions which always translate
+	local FACTION_DEFAULT_ALLIANCE = {
+		[BFAC["Wintersaber Trainers"]] = 0,
+		[BFAC["The League of Arathor"]] = BFAC["The Defilers"],
+		[BFAC["Stormpike Guard"]] = BFAC["Frostwolf Clan"],
+		[BFAC["Silverwing Sentinels"]] = BFAC["Warsong Outriders"],
+		[BFAC["Kurenai"]] = BFAC["The Mag'har"],
+		[BFAC["Honor Hold"]] = BFAC["Thrallmar"],
+		[BFAC["Alliance Vanguard"]] = BFAC["Horde Expedition"],
+		[BFAC["Explorers' League"]] = BFAC["The Taunka"],
+		[BFAC["The Frostborn"]] = BFAC["The Hand of Vengeance"],
+		[BFAC["Valiance Expedition"]] = BFAC["Warsong Offensive"],
+	}
 
-local RaceListAlliance = {
-	[string.lower(BRACE["Human"])] = BFAC["Stormwind"],
-	[string.lower(BRACE["Gnome"])] = BFAC["Gnomeregan Exiles"],
-	[string.lower(BRACE["Dwarf"])] = BFAC["Ironforge"],
-	[string.lower(BRACE["Draenei"])] = BFAC["Exodar"],
-	[string.gsub(string.lower(BRACE["Night Elf"]), " ", "")] = BFAC["Darnassus"],
-	["ne"] = BFAC["Darnassus"], -- People are lazy and NightElf is too long to type
-}
+	function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable, OFaction, TFaction)
+	self:Print("Current race: " .. OFaction)
+	self:Print("Target race: " .. TFaction)
+		local t = {}
 
-function addon:ScanCharacter(TRace, ORace)
-
-	local playerFaction = UnitFactionGroup("player")
-	local RepTable = {}
-
-	self:ScanFactions(RepTable)
-
-	if (RaceListHorde[ORace]) then
-		self:Print(ORace)
-		local OFaction = RaceListHorde[ORace]
-		local TFaction = RaceListAlliance[TRace]
-		self:Print("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
-		-- Are we part of the faction we're scanning?
-		if (playerFaction == "Horde") then
-			self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, OFaction, TFaction))
-		-- Scanning for opposite faction, just dump the defaults
-		else
-			local t = {}
-			for i,j in pairs(FACTION_DEFAULT_HORDE) do
-				if (j == 0) then
-					tinsert(t,"- " .. i .. " -> Removed")
+		-- Parse all the reps that we have
+		for name, replevel in pairs(RepTable) do
+			-- Factions which always have a 1-1 translation
+			if (DefaultFactionTable[name]) then
+				if (DefaultFactionTable[name] == 0) then
+					tinsert(t,"- " .. name .. " -> Removed")
 				else
-					tinsert(t,"* " .. i .. " -> " .. j)
+					tinsert(t,"* " .. name .. " -> " .. DefaultFactionTable[name])
+				end
+			-- Factions that translate based on which race you are transitioning to
+			-- Only will deal with default right now
+			elseif (ChangeFactionTable[name]) then
+				if (name == OFaction) then
+					tinsert(t,"* " .. name .. " -> " .. TFaction)
+				elseif (ChangeFactionTable[name] == TFaction) then
+					tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[OFaction])
+				else
+					tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[name])
 				end
 			end
-			for i,j in pairs(FACTION_CHANGE_HORDE) do
-				tinsert(t,"* " .. i .. " -> " .. j)
-			end
-			self:Print(tconcat(t,"\n"))
 		end
-	elseif (RaceListAlliance[ORace]) then
-		local OFaction = RaceListAlliance[ORace]
-		local TFaction = RaceListHorde[TRace]
-		self:Print("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
-		-- Are we part of the faction we're scanning?
-		if (playerFaction == "Alliance") then
-			self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE, OFaction, TFaction))
-		-- Scanning for opposite faction, just dump the defaults
-		else
-			local t = {}
-			for i,j in pairs(FACTION_DEFAULT_ALLIANCE) do
-				if (j == 0) then
-					tinsert(t,"- " .. i .. " -> Removed")
-				else
-					tinsert(t,"* " .. i .. " -> " .. j)
-				end
-			end
-			for i,j in pairs(FACTION_CHANGE_ALLIANCE) do
-				tinsert(t,"* " .. i .. " -> " .. j)
-			end
-			self:Print(tconcat(t,"\n"))
-		end
+
+		return tconcat(t,"\n")
+
 	end
 
-end
+	local RaceListHorde = {
+		[string.lower(BRACE["Orc"])] = BFAC["Orgrimmar"],
+		[string.lower(BRACE["Troll"])] = BFAC["Darkspear Trolls"],
+		[string.lower(BRACE["Undead"])] = BFAC["Undercity"],
+		[string.lower(BRACE["Tauren"])] = BFAC["Thunder Bluff"],
+		[string.gsub(string.lower(BRACE["Blood Elf"]), " ", "")] = BFAC["Silvermoon City"],
+		["be"] = BFAC["Silvermoon City"], -- People are lazy and BloodElf is too long to type
+	}
+
+	local RaceListAlliance = {
+		[string.lower(BRACE["Human"])] = BFAC["Stormwind"],
+		[string.lower(BRACE["Gnome"])] = BFAC["Gnomeregan Exiles"],
+		[string.lower(BRACE["Dwarf"])] = BFAC["Ironforge"],
+		[string.lower(BRACE["Draenei"])] = BFAC["Exodar"],
+		[string.gsub(string.lower(BRACE["Night Elf"]), " ", "")] = BFAC["Darnassus"],
+		["ne"] = BFAC["Darnassus"], -- People are lazy and NightElf is too long to type
+	}
+
+	function addon:ScanCharacter(TRace, ORace)
+
+		local playerFaction = UnitFactionGroup("player")
+		local RepTable = {}
+
+		self:ScanFactions(RepTable)
+
+		if (RaceListHorde[ORace]) then
+			self:Print(ORace)
+			local OFaction = RaceListHorde[ORace]
+			local TFaction = RaceListAlliance[TRace]
+			self:Print("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
+			-- Are we part of the faction we're scanning?
+			if (playerFaction == "Horde") then
+				self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, OFaction, TFaction))
+			-- Scanning for opposite faction, just dump the defaults
+			else
+				local t = {}
+				for i,j in pairs(FACTION_DEFAULT_HORDE) do
+					if (j == 0) then
+						tinsert(t,"- " .. i .. " -> Removed")
+					else
+						tinsert(t,"* " .. i .. " -> " .. j)
+					end
+				end
+				for i,j in pairs(FACTION_CHANGE_HORDE) do
+					tinsert(t,"* " .. i .. " -> " .. j)
+				end
+				self:Print(tconcat(t,"\n"))
+			end
+		elseif (RaceListAlliance[ORace]) then
+			local OFaction = RaceListAlliance[ORace]
+			local TFaction = RaceListHorde[TRace]
+			self:Print("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
+			-- Are we part of the faction we're scanning?
+			if (playerFaction == "Alliance") then
+				self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE, OFaction, TFaction))
+			-- Scanning for opposite faction, just dump the defaults
+			else
+				local t = {}
+				for i,j in pairs(FACTION_DEFAULT_ALLIANCE) do
+					if (j == 0) then
+						tinsert(t,"- " .. i .. " -> Removed")
+					else
+						tinsert(t,"* " .. i .. " -> " .. j)
+					end
+				end
+				for i,j in pairs(FACTION_CHANGE_ALLIANCE) do
+					tinsert(t,"* " .. i .. " -> " .. j)
+				end
+				self:Print(tconcat(t,"\n"))
+			end
+		end
+
+	end
+
+end --end-do
 
 function addon:SlashHandler(input)
 
