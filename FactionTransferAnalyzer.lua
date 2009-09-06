@@ -226,7 +226,7 @@ Acceptible races are: Orc, Troll, Tauren, BloodElf, Undead, Gnome, Human, NightE
 ]]
 		self:Print(helptext)
 	else
-		local TFaction, OFaction = string.match(lower, "(%a+)%s(%w*)")
+		local TFaction, OFaction = string.match(lower, "(%a+)%s*(%a*)")
 		if (not TFaction) then
 			self:Print("Error, you must specify which race you will be transferring to.")
 		else
