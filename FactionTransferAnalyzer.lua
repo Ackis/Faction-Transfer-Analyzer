@@ -203,6 +203,11 @@ do
 		local playerFaction = UnitFactionGroup("player")
 		local RepTable = {}
 
+		if ((RaceListHorde[TFaction]) and (RaceListHorde[OFaction])) or
+		((RaceListAlliance[TFaction]) and (RaceListAlliance[OFaction])) then
+			self:Print("Error, this transfer is not currently possible (Transfers must be from one faction to the other only).")
+			return
+		end
 		self:ScanFactions(RepTable)
 
 		if (RaceListHorde[ORace]) then
@@ -279,13 +284,7 @@ Acceptible races are: Orc, Troll, Tauren, BloodElf, Undead, Gnome, Human, NightE
 		elseif (not OFaction) or (OFaction and OFaction:trim() == "") then
 			OFaction = string.gsub(string.lower(UnitRace("player")), " ", "")
 		end
-	
-		if ((RaceListHorde[TFaction]) and (RaceListHorde[OFaction])) or
-		((RaceListAlliance[TFaction]) and (RaceListAlliance[OFaction])) then
-			self:Print("Error, this transfer is not currently possible (Transfers must be from one faction to the other only).")
-		else
 			self:ScanCharacter(TFaction, OFaction)
-		end
 	end
 
 end
