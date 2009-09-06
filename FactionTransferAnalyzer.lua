@@ -147,9 +147,9 @@ do
 
 end -- end-do
 
-function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable, ORace, TRace, RaceTable)
-self:Print("Current race: " .. ORace)
-self:Print("Target race: " .. TRace)
+function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable, OFaction, TFaction)
+self:Print("Current race: " .. OFaction)
+self:Print("Target race: " .. TFaction)
 	local t = {}
 
 	-- Parse all the reps that we have
@@ -164,11 +164,12 @@ self:Print("Target race: " .. TRace)
 		-- Factions that translate based on which race you are transitioning to
 		-- Only will deal with default right now
 		elseif (ChangeFactionTable[name]) then
-			if (name ~= RaceTable[ORace]) then
-				tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[name])
+			if (name == OFaction) then
+				tinsert(t,"* " .. name .. " -> " .. TFaction)
+			elseif (ChangeFactionTable[name] == TFaction) then
+				tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[OFaction])
 			else
-				self:Print(RaceTable[ORace])
-				tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[RaceTable[TRace]])
+				tinsert(t,"* " .. name .. " -> " .. ChangeFactionTable[name])
 			end
 		end
 	end
@@ -208,12 +209,12 @@ function addon:ScanCharacter(TRace, ORace)
 		local OFaction = RaceListHorde[ORace]
 		local TFaction = RaceListAlliance[TRace]
 		self:Print("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
-		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, OFaction, TFaction, RaceListHorde))
+		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, OFaction, TFaction))
 	else
 		local OFaction = RaceListAlliance[TRace]
 		local TFaction = RaceListHorde[ORace]
 		self:Print("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
-		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE, OFaction, TFaction, RaceListAlliance))
+		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE, OFaction, TFaction))
 	end
 
 end
