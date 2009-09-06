@@ -147,24 +147,6 @@ do
 
 end -- end-do
 
-local RaceListHorde = {
-	[string.lower(BRACE["Orc"])] = BFAC["Orgrimmar"],
-	[string.lower(BRACE["Troll"])] = BFAC["Darkspear Trolls"],
-	[string.lower(BRACE["Undead"])] = BFAC["Undercity"],
-	[string.lower(BRACE["Tauren"])] = BFAC["Thunder Bluff"],
-	[string.gsub(string.lower(BRACE["Blood Elf"]), " ", "")] = BFAC["Silvermoon City"],
-	["be"] = BFAC["Silvermoon City"], -- People are lazy and BloodElf is too long to type
-}
-
-local RaceListAlliance = {
-	[string.lower(BRACE["Human"])] = BFAC["Stormwind"],
-	[string.lower(BRACE["Gnome"])] = BFAC["Gnomeregan Exiles"],
-	[string.lower(BRACE["Dwarf"])] = BFAC["Ironforge"],
-	[string.lower(BRACE["Draenei"])] = BFAC["Exodar"],
-	[string.gsub(string.lower(BRACE["Night Elf"]), " ", "")] = BFAC["Darnassus"],
-	["ne"] = BFAC["Darnassus"], -- People are lazy and NightElf is too long to type
-}
-
 function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable, ORace, TRace, RaceTable)
 self:Print("Current race: " .. ORace)
 self:Print("Target race: " .. TRace)
@@ -195,6 +177,24 @@ self:Print("Target race: " .. TRace)
 
 end
 
+local RaceListHorde = {
+	[string.lower(BRACE["Orc"])] = BFAC["Orgrimmar"],
+	[string.lower(BRACE["Troll"])] = BFAC["Darkspear Trolls"],
+	[string.lower(BRACE["Undead"])] = BFAC["Undercity"],
+	[string.lower(BRACE["Tauren"])] = BFAC["Thunder Bluff"],
+	[string.gsub(string.lower(BRACE["Blood Elf"]), " ", "")] = BFAC["Silvermoon City"],
+	["be"] = BFAC["Silvermoon City"], -- People are lazy and BloodElf is too long to type
+}
+
+local RaceListAlliance = {
+	[string.lower(BRACE["Human"])] = BFAC["Stormwind"],
+	[string.lower(BRACE["Gnome"])] = BFAC["Gnomeregan Exiles"],
+	[string.lower(BRACE["Dwarf"])] = BFAC["Ironforge"],
+	[string.lower(BRACE["Draenei"])] = BFAC["Exodar"],
+	[string.gsub(string.lower(BRACE["Night Elf"]), " ", "")] = BFAC["Darnassus"],
+	["ne"] = BFAC["Darnassus"], -- People are lazy and NightElf is too long to type
+}
+
 function addon:ScanCharacter(TRace, ORace)
 
 	playerFaction = UnitFactionGroup("player")
@@ -204,9 +204,16 @@ function addon:ScanCharacter(TRace, ORace)
 	self:ScanFactions(RepTable)
 
 	if (playerFaction == "Horde") then
-		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, ORace, TRace))
+		self:Print(ORace)
+		local OFaction = RaceListHorde[ORace]
+		local TFaction = RaceListAlliance[TRace]
+		self:Print("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
+		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, OFaction, TFaction, RaceListHorde))
 	else
-		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE, ORace, TRace))
+		local OFaction = RaceListAlliance[TRace]
+		local TFaction = RaceListHorde[ORace]
+		self:Print("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
+		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE, OFaction, TFaction, RaceListAlliance))
 	end
 
 end
@@ -227,18 +234,19 @@ Acceptible races are: Orc, Troll, Tauren, BloodElf, Undead, Gnome, Human, NightE
 		self:Print(helptext)
 	else
 		local TFaction, OFaction = string.match(lower, "(%a+)%s*(%a*)")
-		if (not TFaction) then
+
+		if (not TFaction) or (TFaction and TFaction:trim() == "") then
 			self:Print("Error, you must specify which race you will be transferring to.")
+			return
+		elseif (not OFaction) or (OFaction and OFaction:trim() == "") then
+			OFaction = string.gsub(string.lower(UnitRace("player")), " ", "")
+		end
+	
+		if ((RaceListHorde[TFaction]) and (RaceListHorde[OFaction])) or
+		((RaceListAlliance[TFaction]) and (RaceListAlliance[OFaction])) then
+			self:Print("Error, this transfer is not currently possible (Transfers must be from one faction to the other only).")
 		else
-			if (not OFaction) then
-				OFaction = string.gsub(string.lower(UnitRace("player")), " ", "")
-			end
-			if ((RaceListHorde[TFaction]) and (RaceListHorde[OFaction])) or
-			((RaceListAlliance[TFaction]) and (RaceListAlliance[OFaction])) then
-				self:Print("Error, this transfer is not currently possible (Transfers must be from one faction to the other only).")
-			else
-				self:ScanCharacter(TFaction, OFaction)
-			end
+			self:ScanCharacter(TFaction, OFaction)
 		end
 	end
 
