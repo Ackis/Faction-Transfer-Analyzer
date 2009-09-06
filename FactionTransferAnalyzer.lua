@@ -198,23 +198,56 @@ local RaceListAlliance = {
 
 function addon:ScanCharacter(TRace, ORace)
 
-	playerFaction = UnitFactionGroup("player")
-
+	local playerFaction = UnitFactionGroup("player")
 	local RepTable = {}
 
 	self:ScanFactions(RepTable)
 
-	if (playerFaction == "Horde") then
+	if (RaceListHorde[ORace]) then
 		self:Print(ORace)
 		local OFaction = RaceListHorde[ORace]
 		local TFaction = RaceListAlliance[TRace]
 		self:Print("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
-		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, OFaction, TFaction))
-	else
-		local OFaction = RaceListAlliance[TRace]
-		local TFaction = RaceListHorde[ORace]
+		-- Are we part of the faction we're scanning?
+		if (playerFaction == "Horde") then
+			self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, OFaction, TFaction))
+		-- Scanning for opposite faction, just dump the defaults
+		else
+			local t = {}
+			for i,j in pairs(FACTION_DEFAULT_HORDE) do
+				if (j == 0) then
+					tinsert(t,"- " .. i .. " -> Removed")
+				else
+					tinsert(t,"* " .. i .. " -> " .. j)
+				end
+			end
+			for i,j in pairs(FACTION_CHANGE_HORDE) do
+				tinsert(t,"* " .. i .. " -> " .. j)
+			end
+			self:Print(tconcat(t,"\n"))
+		end
+	elseif (RaceListAlliance[ORace]) then
+		local OFaction = RaceListAlliance[ORace]
+		local TFaction = RaceListHorde[TRace]
 		self:Print("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
-		self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE, OFaction, TFaction))
+		-- Are we part of the faction we're scanning?
+		if (playerFaction == "Alliance") then
+			self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE, OFaction, TFaction))
+		-- Scanning for opposite faction, just dump the defaults
+		else
+			local t = {}
+			for i,j in pairs(FACTION_DEFAULT_ALLIANCE) do
+				if (j == 0) then
+					tinsert(t,"- " .. i .. " -> Removed")
+				else
+					tinsert(t,"* " .. i .. " -> " .. j)
+				end
+			end
+			for i,j in pairs(FACTION_CHANGE_ALLIANCE) do
+				tinsert(t,"* " .. i .. " -> " .. j)
+			end
+			self:Print(tconcat(t,"\n"))
+		end
 	end
 
 end
