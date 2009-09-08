@@ -127,6 +127,7 @@ do
 		[BFAC["Warsong Offensive"]] = BFAC["Valiance Expedition"],
 	}
 
+	-- Alliance factions which change based on the race combination
 	local FACTION_CHANGE_ALLIANCE = {
 		[BFAC["Darnassus"]] = BFAC["Undercity"],
 		[BFAC["Stormwind"]] = BFAC["Orgrimmar"],
@@ -261,6 +262,54 @@ do
 			end
 		end
 
+	end
+
+end --end-do
+
+do
+
+	-- Default Horde mounts which always translate
+	local MOUNT_HORDE_ALLIANCE = {
+		[61230] = 61229,
+		[23509] = 23510,
+		[68188] = 68187,
+		[66088] = 66087,
+		[64659] = 17229,
+		[32245] = 32235,
+		[61997] = 61996,
+		[66091] = 66090,
+		[55531] = 60424,
+		[32243] = 32239,
+		[32244] = 32240,
+		[32296] = 32242,
+		[32295] = 32290,
+		[32246] = 32289,
+		[32297] = 32292,
+		[68056] = 68057,
+	}   
+
+	-- Default Alliance mounts which always translate
+	local MOUNT_DEFAULT_ALLIANCE = {
+		[61229] = 61230,
+		[23510] = 23509,
+		[68187] = 68188,
+		[66087] = 66088,
+		[17229] = 64659,
+		[32235] = 32245,
+		[61996] = 61997,
+		[66090] = 66091,
+		[60424] = 55531,
+		[32239] = 32243,
+		[32240] = 32244,
+		[32242] = 32296,
+		[32290] = 32295,
+		[32289] = 32246,
+		[32292] = 32297,
+		[68057] = 68056,
+	}
+
+	function addon:ScanMounts()
+	
 	end
 
 end --end-do
