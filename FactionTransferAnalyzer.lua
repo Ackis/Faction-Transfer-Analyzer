@@ -180,6 +180,10 @@ do
 
 	end
 
+end --end-do
+
+do
+
 	local RaceListHorde = {
 		[string.lower(BRACE["Orc"])] = BFAC["Orgrimmar"],
 		[string.lower(BRACE["Troll"])] = BFAC["Darkspear Trolls"],
