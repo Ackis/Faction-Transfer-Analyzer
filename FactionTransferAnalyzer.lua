@@ -102,6 +102,24 @@ do
 
 end -- end-do
 
+local RaceListHorde = {
+	[string.lower(BRACE["Orc"])] = BFAC["Orgrimmar"],
+	[string.lower(BRACE["Troll"])] = BFAC["Darkspear Trolls"],
+	[string.lower(BRACE["Undead"])] = BFAC["Undercity"],
+	[string.lower(BRACE["Tauren"])] = BFAC["Thunder Bluff"],
+	[string.gsub(string.lower(BRACE["Blood Elf"]), " ", "")] = BFAC["Silvermoon City"],
+	["be"] = BFAC["Silvermoon City"], -- People are lazy and BloodElf is too long to type
+}
+
+local RaceListAlliance = {
+	[string.lower(BRACE["Human"])] = BFAC["Stormwind"],
+	[string.lower(BRACE["Gnome"])] = BFAC["Gnomeregan Exiles"],
+	[string.lower(BRACE["Dwarf"])] = BFAC["Ironforge"],
+	[string.lower(BRACE["Draenei"])] = BFAC["Exodar"],
+	[string.gsub(string.lower(BRACE["Night Elf"]), " ", "")] = BFAC["Darnassus"],
+	["ne"] = BFAC["Darnassus"], -- People are lazy and NightElf is too long to type
+}
+
 do
 
 	-- Horde factions which change based on the race combination
@@ -180,25 +198,6 @@ do
 		return tconcat(t,"\n")
 
 	end
-
-
-	local RaceListHorde = {
-		[string.lower(BRACE["Orc"])] = BFAC["Orgrimmar"],
-		[string.lower(BRACE["Troll"])] = BFAC["Darkspear Trolls"],
-		[string.lower(BRACE["Undead"])] = BFAC["Undercity"],
-		[string.lower(BRACE["Tauren"])] = BFAC["Thunder Bluff"],
-		[string.gsub(string.lower(BRACE["Blood Elf"]), " ", "")] = BFAC["Silvermoon City"],
-		["be"] = BFAC["Silvermoon City"], -- People are lazy and BloodElf is too long to type
-	}
-
-	local RaceListAlliance = {
-		[string.lower(BRACE["Human"])] = BFAC["Stormwind"],
-		[string.lower(BRACE["Gnome"])] = BFAC["Gnomeregan Exiles"],
-		[string.lower(BRACE["Dwarf"])] = BFAC["Ironforge"],
-		[string.lower(BRACE["Draenei"])] = BFAC["Exodar"],
-		[string.gsub(string.lower(BRACE["Night Elf"]), " ", "")] = BFAC["Darnassus"],
-		["ne"] = BFAC["Darnassus"], -- People are lazy and NightElf is too long to type
-	}
 
 	function addon:ScanRep(TRace, ORace)
 
@@ -314,7 +313,7 @@ do
 
 	local mounts = {}
 
-	function addon:ScanMounts()
+	local function PopulateMounts()
 
 		local nummounts = GetNumCompanions("MOUNT")
 
@@ -323,6 +322,12 @@ do
 			local _,_,mountspell = GetCompanionInfo("MOUNT",i)
 			mounts[mountspell] = true
 		end
+
+	end
+
+	function addon:ScanMounts()
+
+		PopulateMounts()
 
 	end
 
