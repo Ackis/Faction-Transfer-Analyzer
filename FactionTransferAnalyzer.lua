@@ -102,18 +102,24 @@ do
 
 end -- end-do
 
+local orc = string.lower(BRACE["Orc"])
+local troll = string.lower(BRACE["Troll"])
+
 local RaceListHorde = {
-	[string.lower(BRACE["Orc"])] = BFAC["Orgrimmar"],
-	[string.lower(BRACE["Troll"])] = BFAC["Darkspear Trolls"],
+	[orc] = BFAC["Orgrimmar"],
+	[troll] = BFAC["Darkspear Trolls"],
 	[string.lower(BRACE["Undead"])] = BFAC["Undercity"],
 	[string.lower(BRACE["Tauren"])] = BFAC["Thunder Bluff"],
 	[string.gsub(string.lower(BRACE["Blood Elf"]), " ", "")] = BFAC["Silvermoon City"],
 	["be"] = BFAC["Silvermoon City"], -- People are lazy and BloodElf is too long to type
 }
 
+local human = string.lower(BRACE["Human"])
+local gnome = string.lower(BRACE["Gnome"])
+
 local RaceListAlliance = {
-	[string.lower(BRACE["Human"])] = BFAC["Stormwind"],
-	[string.lower(BRACE["Gnome"])] = BFAC["Gnomeregan Exiles"],
+	[human] = BFAC["Stormwind"],
+	[gnome] = BFAC["Gnomeregan Exiles"],
 	[string.lower(BRACE["Dwarf"])] = BFAC["Ironforge"],
 	[string.lower(BRACE["Draenei"])] = BFAC["Exodar"],
 	[string.gsub(string.lower(BRACE["Night Elf"]), " ", "")] = BFAC["Darnassus"],
@@ -276,33 +282,6 @@ do
 	-- 1 = random
 	local MOUNT_CHANGE_HORDE = {
 		[35018] = 1,
-	}
-
-	-- Default Horde mounts which always translate
-	local MOUNT_DEFAULT_HORDE = {
-		[61230] = 61229,
-		[23509] = 23510,
-		[68188] = 68187,
-		[66088] = 66087,
-		[64659] = 17229,
-		[32245] = 32235,
-		[61997] = 61996,
-		[66091] = 66090,
-		[55531] = 60424,
-		[32243] = 32239,
-		[32244] = 32240,
-		[32296] = 32242,
-		[32295] = 32290,
-		[32246] = 32289,
-		[32297] = 32292,
-		[68056] = 68057,
-	}   
-
-	-- Alliance mounts which change based on the race combination
-	-- 0 = random discontinued
-	-- 1 = random
-	local MOUNT_CHANGE_ALLIANCE = {
-		[16056] = 0,
 		[6654] = 458,
 		[578] = 470,
 		[580] = 472,
@@ -355,6 +334,87 @@ do
 		[65641] = 65642,
 		[65644] = 65643,
 		[17462] = 66847,
+	}
+
+	-- Default Horde mounts which always translate
+	local MOUNT_DEFAULT_HORDE = {
+		[61230] = 61229,
+		[23509] = 23510,
+		[68188] = 68187,
+		[66088] = 66087,
+		[64659] = 17229,
+		[32245] = 32235,
+		[61997] = 61996,
+		[66091] = 66090,
+		[55531] = 60424,
+		[32243] = 32239,
+		[32244] = 32240,
+		[32296] = 32242,
+		[32295] = 32290,
+		[32246] = 32289,
+		[32297] = 32292,
+		[68056] = 68057,
+	}   
+
+	-- Alliance mounts which change based on the race combination
+	-- 0 = random discontinued
+	-- 1 = random
+	local MOUNT_CHANGE_ALLIANCE = {
+		[16056] = 0,
+		[22719] = 22718,
+		[16055] = 0,
+		[6896] = 16084,
+		[470] = 578,
+		[48027] = 35028,
+		[22720] = 22721,
+		[22717] = 22724,
+		[22723] = 22722,
+		[10969] = 18990,
+		[34406] = 35022,
+		[458] = 6654,
+		[6648] = 10799,
+		[63637] = 6653,
+		[63639] = 63643,
+		[17460] = 63642,
+		[63638] = 10795,
+		[35710] = 35020,
+		[6777] = 8395,
+		[35713] = 35025,
+		[35712] = 35027,
+		[35714] = 33660,
+		[65637] = 65639,
+		[17453] = 18989,
+		[17459] = 18991,
+		[63636] = 63635,
+		[16082] = 16080,
+		[472] = 580,
+		[35711] = 10873,
+		[10873] = 64657,
+		[10789] = 17464,
+		[63232] = 63640,
+		[66847] = 17462,
+		[8394] = 64977,
+		[10793] = 17463,
+		[23238] = 23243,
+		[23229] = 23250,
+		[23221] = 66846,
+		[23239] = 23241,
+		[65640] = 65646,
+		[23225] = 23249,
+		[23219] = 23246,
+		[65638] = 65645,
+		[23227] = 23251,
+		[23338] = 17465,
+		[65643] = 65644,
+		[23223] = 23248,
+		[23240] = 23242,
+		[23228] = 23252,
+		[23222] = 23247,
+		[65642] = 65641,
+		[17454] = 1,
+		[15779] = 18992,
+		[6898] = 10796,
+		[16083] = 16081,
 	}            
 
 	-- Default Alliance mounts which always translate
@@ -377,6 +437,65 @@ do
 		[68057] = 68056,
 	}
 
+	[troll] = {
+		[human] = {
+			[8395] = 472,
+			[10796] = 6648,
+			[10799] = 458,
+			[1] = 470,
+			[23241] = 23229,
+			[23242] = 23228,
+			[23243] = 23227,
+			[16084] = 16082,
+			[580] = 6777,
+			[6653] = 6898,
+			[6653] = 6899,
+			[16080] = 6896,
+			[64658] = 1,
+			[10795] = 16083,
+			[63635] = 63232,
+			[65644] = 65640,
+			[22721] = 22717,
+			[23250] = 23239,
+			[23252] = 23240,
+			[23251] = 23238,
+			[16081] = 17460,
+			[63640] = 63636,
+			[65646] = 65643,
+			[22724] = 22720,
+		},           
+		[gnome] = {
+		},
+	}
+
+	[human] = {
+		[troll] = {
+			[472] = 8395,
+			[6648] = 10796,
+			[458] = 10799,
+			[470] = 1,
+			[23229] = 23241,
+			[23228] = 23242,
+			[23227] = 23243,
+			[16082] = 16084,
+			[16083] = 10795,
+			[63232] = 63635,
+			[65640] = 65644,
+			[22717] = 22721,
+			[6777] = 580,
+			[6898] = 6653,
+			[6899] = 6654,
+			[1] = 64658,
+			[23239] = 23250,
+			[23240] = 23252,
+			[23238] = 23251,
+			[6896] = 16080,
+			[17460] = 16081,
+			[63636] = 63640,
+			[65643] = 65646,
+			[22720] = 22724,
+		},
+	}
 	local mounts = {}
 
 	local function PopulateMounts()
@@ -423,9 +542,19 @@ do
 			local omount = GetSpellInfo(k)
 			local tmount = GetSpellInfo(l)
 			if (mounts[k]) then
-				tinsert(t,"* " .. omount .. " -> " .. tmount)
+				if ([ORace][TRace][k]) then
+					tmount = GetSpellInfo([ORace][TRace][k])
+					tinsert(t,"* " .. omount .. " -> " .. tmount)
+				else
+					tinsert(t,"* " .. omount .. " -> " .. tmount)
+				end
 			else
-				tinsert(t,"* " .. omount .. " -> " .. tmount .. " (You do not have this mount)")
+				if ([ORace][TRace][k]) then
+					tmount = GetSpellInfo([ORace][TRace][k])
+					tinsert(t,"* " .. omount .. " -> " .. tmount .. " (You do not have this mount)")
+				else
+					tinsert(t,"* " .. omount .. " -> " .. tmount .. " (You do not have this mount)")
+				end
 			end
 		end
 
