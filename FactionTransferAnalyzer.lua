@@ -406,10 +406,12 @@ do
 
 		-- Parse through all the mounts in the transfer list and convert them over
 		for k,l in pairs(parselist) do
+			local omount = GetSpellInfo(k)
+			local tmount = GetSpellInfo(l)
 			if (mounts[k]) then
-				local omount = GetSpellInfo(k)
-				local tmount = GetSpellInfo(l)
 				tinsert(t,"* " .. omount .. " -> " .. tmount)
+			else
+				tinsert(t,"* " .. omount .. " -> " .. tmount .. " (You do not have this mount)")
 			end
 		end
 
