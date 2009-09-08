@@ -181,9 +181,6 @@ do
 
 	end
 
-end --end-do
-
-do
 
 	local RaceListHorde = {
 		[string.lower(BRACE["Orc"])] = BFAC["Orgrimmar"],
@@ -203,7 +200,7 @@ do
 		["ne"] = BFAC["Darnassus"], -- People are lazy and NightElf is too long to type
 	}
 
-	function addon:ScanCharacter(TRace, ORace)
+	function addon:ScanRep(TRace, ORace)
 
 		local playerFaction = UnitFactionGroup("player")
 		local RepTable = {}
@@ -213,6 +210,7 @@ do
 			self:Print("Error, this transfer is not currently possible (Transfers must be from one faction to the other only).")
 			return
 		end
+
 		self:ScanFactions(RepTable)
 
 		if (RaceListHorde[ORace]) then
@@ -266,6 +264,12 @@ do
 
 end --end-do
 
+function addon:ScanCharacter(TFaction, OFaction)
+
+	self:ScanRep(TFaction, OFaction)
+
+end
+
 do
 
 	-- Default Horde mounts which always translate
@@ -308,8 +312,18 @@ do
 		[68057] = 68056,
 	}
 
+	local mounts = {}
+
 	function addon:ScanMounts()
-	
+
+		local nummounts = GetNumCompanions("MOUNT")
+
+		for i=1,nummounts,1 do
+			-- Get the pet's name and spell ID
+			local _,_,mountspell = GetCompanionInfo("MOUNT",i)
+			mounts[mountspell] = true
+		end
+
 	end
 
 end --end-do
