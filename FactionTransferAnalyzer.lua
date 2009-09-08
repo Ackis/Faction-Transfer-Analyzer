@@ -397,15 +397,29 @@ do
 		local t = {}
 
 		-- Handle Default Transfers
-		local parselist = nil
+		local defaultlist = nil
+		local changelist = nil
 		if (RaceListHorde[ORace]) then
-			parselist = MOUNT_DEFAULT_HORDE
+			defaultlist = MOUNT_DEFAULT_HORDE
+			changelist = MOUNT_CHANGE_HORDE
 		elseif (RaceListAlliance[ORace]) then
-			parselist = MOUNT_DEFAULT_ALLIANCE
+			defaultlist = MOUNT_DEFAULT_ALLIANCE
+			changelist = MOUNT_CHANGE_ALLIANCE
 		end
 
 		-- Parse through all the mounts in the transfer list and convert them over
-		for k,l in pairs(parselist) do
+		for k,l in pairs(defaultlist) do
+			local omount = GetSpellInfo(k)
+			local tmount = GetSpellInfo(l)
+			if (mounts[k]) then
+				tinsert(t,"* " .. omount .. " -> " .. tmount)
+			else
+				tinsert(t,"* " .. omount .. " -> " .. tmount .. " (You do not have this mount)")
+			end
+		end
+
+		-- Now lets parse through all the changing ones
+		for k,l in pairs(changelist) do
 			local omount = GetSpellInfo(k)
 			local tmount = GetSpellInfo(l)
 			if (mounts[k]) then
