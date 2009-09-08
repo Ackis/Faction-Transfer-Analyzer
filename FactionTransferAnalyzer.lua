@@ -271,8 +271,15 @@ end
 
 do
 
+	-- Alliance mounts which change based on the race combination
+	-- 0 = random discontinued
+	-- 1 = random
+	local MOUNT_CHANGE_HORDE = {
+		[35018] = 1,
+	}
+
 	-- Default Horde mounts which always translate
-	local MOUNT_HORDE_ALLIANCE = {
+	local MOUNT_DEFAULT_HORDE = {
 		[61230] = 61229,
 		[23509] = 23510,
 		[68188] = 68187,
@@ -290,6 +297,65 @@ do
 		[32297] = 32292,
 		[68056] = 68057,
 	}   
+
+	-- Alliance mounts which change based on the race combination
+	-- 0 = random discontinued
+	-- 1 = random
+	local MOUNT_CHANGE_ALLIANCE = {
+		[16056] = 0,
+		[6654] = 458,
+		[578] = 470,
+		[580] = 472,
+		[10799] = 6648,
+		[8395] = 6777,
+		[16084] = 6896,
+		[10796] = 6898,
+		[64977] = 8394,
+		[17464] = 10789,
+		[17463] = 10793,
+		[64657] = 10873,
+		[18990] = 10969,
+		[18992] = 15779,
+		[16080] = 16082,
+		[16081] = 16083,
+		[18989] = 17453,
+		[18991] = 17459,
+		[63642] = 17460,
+		[22724] = 22717,
+		[22718] = 22719,
+		[22721] = 22720,
+		[22722] = 22723,
+		[23246] = 23219,
+		[66846] = 23221,
+		[23247] = 23222,
+		[23248] = 23223,
+		[23249] = 23225,
+		[23251] = 23227,
+		[23252] = 23228,
+		[23250] = 23229,
+		[23243] = 23238,
+		[23241] = 23239,
+		[23242] = 23240,
+		[17465] = 23338,
+		[35022] = 34406,
+		[35020] = 35710,
+		[10873] = 35711,
+		[35027] = 35712,
+		[35025] = 35713,
+		[33660] = 35714,
+		[35028] = 48027,
+		[63640] = 63232,
+		[63635] = 63636,
+		[6653] = 63637,
+		[10795] = 63638,
+		[63643] = 63639,
+		[65639] = 65637,
+		[65645] = 65638,
+		[65646] = 65640,
+		[65641] = 65642,
+		[65644] = 65643,
+		[17462] = 66847,
+	}            
 
 	-- Default Alliance mounts which always translate
 	local MOUNT_DEFAULT_ALLIANCE = {
@@ -314,7 +380,6 @@ do
 	local mounts = {}
 
 	local function PopulateMounts()
-
 		local nummounts = GetNumCompanions("MOUNT")
 
 		for i=1,nummounts,1 do
@@ -322,12 +387,31 @@ do
 			local _,_,mountspell = GetCompanionInfo("MOUNT",i)
 			mounts[mountspell] = true
 		end
-
 	end
 
-	function addon:ScanMounts()
+	function addon:ScanMounts(TRace, ORace)
 
+		-- Lets get the mount list
 		PopulateMounts()
+
+		local t = {}
+
+		-- Handle Default Transfers
+		local parselist = nil
+		if (RaceListHorde[ORace]) then
+			parselist = MOUNT_DEFAULT_HORDE
+		elseif (RaceListAlliance[ORace]) then
+			parselist = MOUNT_DEFAULT_ALLIANCE
+		end
+
+		-- Parse through all the mounts in the transfer list and convert them over
+		for k,l in pairs(parselist) do
+			if (mounts[k]) then
+				local omount = GetSpellInfo(k)
+				local tmount = GetSpellInfo(l)
+				tinsert(t,"* " .. omount .. " -> " .. tmount)
+			end
+		end
 
 	end
 
