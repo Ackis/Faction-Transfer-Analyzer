@@ -25,7 +25,8 @@ This source code is released under All Rights Reserved.
 --]]
 
 --- **Faction Transfer Analyzer** provides you with information on what will occur should you
--- transfer factions with the current character.
+-- transfer factions with the current character.  Essentially it automates the comparison from
+-- the site http://www.worldofwarcraft.com/info/faction-change/index.xml for you.
 -- @class file
 -- @name FactionTransferAnalyzer.lua
 -- @release 1.0
