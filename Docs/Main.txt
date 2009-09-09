@@ -1,0 +1,48 @@
+﻿==What it does
+The Faction Transfer Analyzer assists with an automatic comparison of the changes that will occur should you choose to transfer your characters factions.
+
+Blizzard has provided a detailed explaination [[http://www.worldofwarcraft.com/info/faction-change/index.xml | here]] however if you're worried about your reputations, or mounts, it may take you a long time to analyze what will occur when you transfer.  That's where this addon comes into play.  It will assist you by providing a summary of what will change based off your characters current status.
+
+==Donations
+I have setup a donation site via [[http://www.pledgie.com/campaigns/3462|Pledgie]].  Feel free to donate if you like this mod.  I have put countless hours of time and effort into it along with many people who have helped me.  I did not write this mod with the intent to make any money from it.  I wrote it to help me with some needs that I saw in-game, and well with requests and my goal to make it filled with information it's become a massive project.
+
+If you don't wish to donate money feel free to consider one of the following methods which may be more suitable:
+* Volunteer time at your local animal shelter such as the [[http://www.edmontonhumanesociety.com/|Society for Prevention of Cruelty for Animals (SPCA)]] or drop a few bucks off for them.  If you do this, please let [[http://www.wowace.com/home/send-private-message/|me]] know.
+* Send [[http://www.wowace.com/home/send-private-message/|me]] some UDE Points.  These points are obtained from the [[http://www.wowtcg.com/|World of Warcraft TCG and Mini]] game.
+* Send some gold to one of the authors in-game or help out with some achievements, or even send a message saying thanks. :)
+** [[http://www.wowarmory.com/character-sheet.xml?r=Thunderlord&n=Ackis|Ackis Thunderlord (US)]] Ackis
+*** Ackis is currently looking for a guild (along with his girlfriend).  We're looking for a guild which has compitent people that can progress through the hard modes, aren't full of themselves and raids somewhat casually (2-3 nights a week).
+
+==Where to get it
+* [[http://www.wowace.com/projects/faction-transfer-analyzer/files/|WoW Ace]] - Alpha Quality
+* [[http://wow.curse.com/downloads/wow-addons/details/faction-transfer-analyzer.aspx|Curse]] - Stable release
+* [[http://www.wowinterface.com/downloads/info8512-FactionTransferAnalyzer.html|WoWInterface]] - Stable release (Not hosted there yet)
+
+==How to get it to work
+You open up a trade skill window (ie: enchanting) and click on the Scan button which is attached to the trade skill window.  Results will be printed out to the chat frame, or into a separate window depending on preference.
+
+===Command Line
+Ackis Recipe List has recently changed to use a GUI for change parameters.  Type **/arl** to open up the GUI.  Acceptable commands include:
+* Opens up the about panel, listing information about the mod:
+<<code>>/arl about<</code>>
+** Opens up the sorting options:
+ <<code>>/arl sort<</code>> or <<code>>/arl sorting<</code>>
+** Opens up in-game documentation regarding ARL:
+ <<code>>/arl documentation<</code>>
+** Opens up display options:
+ <<code>>/arl display<</code>>
+** Opens up profile options:
+ <<code>>/arl profile<</code>>
+** Opens up filtering options:
+ <<code>>/arl filter<</code>>
+** Performs a scan for missing recipes.  This is in place for those times when you cannot access the scan button:
+ <<code>>/arl scan<</code>>
+
+==Feature Requests/Bug Reporting==
+Read the [[http://www.wowace.com/projects/faction-transfer-analyzer/pages/feedback-and-bug-reporting/|Bug Reporting and Feature Requesting]] information //before// submitted a bug report or feature request.  Posting reports in the comments is //not// the place to do so.  I had to turn off the comments at [[http://wow.curse.com/downloads/wow-addons/details/faction-transfer-analyzer.aspx|Curse.com]] because of constant bug reports and feature requests.  Comments are for questions on how to use the mod.  Please follow these small little instructions to make my life easier.  The easier you make development for Ackis Recipe List, the more time I will have to develop other addons.
+
+===Bug Reports===
+Please use the [[http://www.wowace.com/projects/faction-transfer-analyzer/tickets/|wowace]] tracker to file bug reports.  Posting bugs in the comments is not the place to do it.
+
+===Feature Request===
+Please use the [[http://www.wowace.com/projects/faction-transfer-analyzer/tickets/|wowace]] tracker to add suggestions and feature requests.  Not all suggestions will be accepted, there are a lot of people using this addon and I'll try to make it as user friendly, but when a decision is made please accept it.

@@ -13,6 +13,7 @@ enable-nolib-creation: yes
 ignore:
  - .pkgmeta
  - .docmeta
+ - Docs
 
 #tools-used:
 
