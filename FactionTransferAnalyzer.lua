@@ -562,6 +562,7 @@ do
 			end
 		end
 
+		self:Print(table.concat(t,"\n"))
 	end
 
 end --end-do
