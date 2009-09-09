@@ -1,4 +1,4 @@
---[[
+﻿--[[
 
 ************************************************************************
 
@@ -272,6 +272,7 @@ end --end-do
 function addon:ScanCharacter(TFaction, OFaction)
 
 	self:ScanRep(TFaction, OFaction)
+	self:ScanMounts(TFaction, OFaction)
 
 end
 
