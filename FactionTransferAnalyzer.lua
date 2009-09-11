@@ -221,7 +221,7 @@ do
 		if (RaceListHorde[ORace]) then
 			local OFaction = RaceListHorde[ORace]
 			local TFaction = RaceListAlliance[TRace]
-			tinsert("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
+			tinsert(t,"Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
 			-- Are we part of the faction we're scanning?
 			if (playerFaction == "Horde") then
 				tinsert(t,self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, OFaction, TFaction))
@@ -552,7 +552,7 @@ do
 			end
 		end
 
-		return t
+		return tconcat(t,"\n")
 
 	end
 
