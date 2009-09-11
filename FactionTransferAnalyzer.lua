@@ -109,26 +109,34 @@ end -- end-do
 
 local orc = string.lower(BRACE["Orc"])
 local troll = string.lower(BRACE["Troll"])
+local undead = string.lower(BRACE["Undead"])
+local tauren = string.lower(BRACE["Tauren"])
+local bloodelf = string.gsub(string.lower(BRACE["Blood Elf"]), " ", "")
+local be = "be"
 
 local RaceListHorde = {
 	[orc] = BFAC["Orgrimmar"],
 	[troll] = BFAC["Darkspear Trolls"],
-	[string.lower(BRACE["Undead"])] = BFAC["Undercity"],
-	[string.lower(BRACE["Tauren"])] = BFAC["Thunder Bluff"],
-	[string.gsub(string.lower(BRACE["Blood Elf"]), " ", "")] = BFAC["Silvermoon City"],
-	["be"] = BFAC["Silvermoon City"], -- People are lazy and BloodElf is too long to type
+	[undead] = BFAC["Undercity"],
+	[tauren] = BFAC["Thunder Bluff"],
+	[bloodelf] = BFAC["Silvermoon City"],
+	[be] = BFAC["Silvermoon City"], -- People are lazy and BloodElf is too long to type
 }
 
 local human = string.lower(BRACE["Human"])
 local gnome = string.lower(BRACE["Gnome"])
+local dwarf = string.lower(BRACE["Dwarf"])
+local draenei = string.lower(BRACE["Draenei"])
+local nightelf = string.gsub(string.lower(BRACE["Night Elf"]), " ", "")
+local ne = "ne"
 
 local RaceListAlliance = {
 	[human] = BFAC["Stormwind"],
 	[gnome] = BFAC["Gnomeregan Exiles"],
-	[string.lower(BRACE["Dwarf"])] = BFAC["Ironforge"],
-	[string.lower(BRACE["Draenei"])] = BFAC["Exodar"],
-	[string.gsub(string.lower(BRACE["Night Elf"]), " ", "")] = BFAC["Darnassus"],
-	["ne"] = BFAC["Darnassus"], -- People are lazy and NightElf is too long to type
+	[dwarf] = BFAC["Ironforge"],
+	[draenei] = BFAC["Exodar"],
+	[nightelf] = BFAC["Darnassus"],
+	[ne] = BFAC["Darnassus"], -- People are lazy and NightElf is too long to type
 }
 
 -- Faction Stuff
@@ -488,6 +496,10 @@ do
 				[22720] = 22724,
 			},
 		},
+		[gnome] = {
+			[troll] = {
+			},
+		}
 	}
 
 	local mounts = {}
