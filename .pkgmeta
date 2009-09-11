@@ -15,7 +15,9 @@ ignore:
  - .docmeta
  - Docs
 
-#tools-used:
+tools-used:
+ - dlcount
+ - querier
 
 externals:
  libs/LibStub:
