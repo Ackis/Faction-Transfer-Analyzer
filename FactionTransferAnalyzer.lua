@@ -493,18 +493,18 @@ do
 				[22723] = 22721,
 			},
 			[nightelf] = {
-				[18990] = 64977,
-				[18989] = 17464,
-				[64657] = 17463,
+				[6777] = 64977,
+				[6898] = 17464,
+				[6899] = 17463,
 				[1] = 17462,
-				[23249] = 17465,
-				[23248] = 23246,
-				[23247] = 66846,
-				[18991] = 0,
-				[18992] = 0,
-				[63641] = 63643,
-				[65641] = 65645,
-				[22718] = 22722,
+				[23239] = 17465,
+				[23240] = 23246,
+				[23238] = 66846,
+				[17461] = 0,
+				[17460] = 0,
+				[63636] = 63643,
+				[65643] = 65645,
+				[22720] = 22722,
 				[8394] = 8395,
 				[10789] = 10796,
 				[10793] = 10799,
@@ -542,6 +542,8 @@ do
 				[63635] = 63638,
 				[65644] = 65642,
 				[22721] = 22719,
+			},
+			[draenei] = {
 			},
 		},
 		[human] = {
@@ -624,19 +626,19 @@ Black Battlestrider		Black War Raptor
 		},
 		[nightelf] = {
 			[troll] = {
-				[64977] = 18990,
-				[17464] = 18989,
-				[17463] = 64657,
+				[64977] = 6777,
+				[17464] = 6898,
+				[17463] = 6899,
 				[17462] = 1,
-				[17465] = 23249,
-				[23246] = 23248,
-				[66846] = 23247,
-				[0] = 18991,
-				[0] = 18992,
-				[63643] = 63641,
-				[65645] = 65641,
-				[22722] = 22718,
-				[8395] = 8394,
+				[17465] = 23239,
+				[23246] = 23240,
+				[66846] = 23238,
+				[0] = 17461,
+				[0] = 17460,
+				[63643] = 63636,
+				[65645] = 65643,
+				[22722] = 22720,
+				[8395] = 8394,  
 				[10796] = 10789,
 				[10799] = 10793,
 				[1] = 66847,
@@ -649,6 +651,35 @@ Black Battlestrider		Black War Raptor
 				[65644] = 65638,
 				[22721] = 22723,
 			},
+		},
+		[draenei] = {
+			[troll] = {
+			},
+--[[
+Gray Ram		Black Hawkstrider
+White Ram		Blue Hawkstrider
+Brown Ram		Red Hawkstrider
+** Random Mount		Purple Hawkstrider
+Swift Gray Ram		Swift Green Hawkstrider
+Swift White Ram		Swift Purple Hawkstrider
+Swift Brown Ram		Swift Pink Hawkstrider
+Black Ram		* Random Discontinued Epic Mount
+Frost Ram		* Random Discontinued Epic Mount
+Ironforge Ram		Silvermoon Hawkstrider
+Swift Violet Ram		Swift Red Hawkstrider
+Black War Ram		Swift Warstrider
+Brown Elekk		Emerald Raptor
+Gray Elekk		Turquoise Raptor
+Purple Elekk		Violet Raptor
+Great Blue Elekk		Swift Blue Raptor
+Great Green Elekk		Swift Olive Raptor
+Great Purple Elekk		Swift Orange Raptor
+* Random Discontinued Epic Mount		Mottled Red Raptor
+* Random Discontinued Epic Mount		Ivory Raptor
+Exodar Elekk		Darkspear Raptor
+Great Red Elekk		Swift Purple Raptor
+Black War Elekk		Black War Raptor
+]]--
 		},
 	}
 
