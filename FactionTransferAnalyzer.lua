@@ -221,7 +221,7 @@ do
 		if (RaceListHorde[ORace]) then
 			local OFaction = RaceListHorde[ORace]
 			local TFaction = RaceListAlliance[TRace]
-			tinsert(t,"Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
+			tinsert(t,"Displaying transfer changes from " .. ORace .. " (|cffff0000" .. OFaction .. "|r) to " .. TRace .. " (|cff0000ff" .. TFaction .. "|r).\nReputation Changes:\n")
 			-- Are we part of the faction we're scanning?
 			if (playerFaction == "Horde") then
 				tinsert(t,self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, OFaction, TFaction))
@@ -229,7 +229,7 @@ do
 			else
 				for i,j in pairs(FACTION_DEFAULT_HORDE) do
 					if (j == 0) then
-						tinsert(t,"- " .. i .. " -> Removed")
+						tinsert(t,"|cffff0000- " .. i .. " -> Removed|r")
 					else
 						tinsert(t,"* " .. i .. " -> " .. j)
 					end
@@ -241,7 +241,7 @@ do
 		elseif (RaceListAlliance[ORace]) then
 			local OFaction = RaceListAlliance[ORace]
 			local TFaction = RaceListHorde[TRace]
-			tinsert(t,"Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
+			tinsert(t,"Displaying transfer changes from " .. ORace .. " (|cff0000ff" .. OFaction .. "|r) to " .. TRace .. " (|cffff0000" .. TFaction .. "|r).\nReputation Changes:\n")
 			-- Are we part of the faction we're scanning?
 			if (playerFaction == "Alliance") then
 				tinsert(t,self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE, OFaction, TFaction))
@@ -249,7 +249,7 @@ do
 			else
 				for i,j in pairs(FACTION_DEFAULT_ALLIANCE) do
 					if (j == 0) then
-						tinsert(t,"- " .. i .. " -> Removed")
+						tinsert(t,"cffff0000- " .. i .. " -> Removed|r")
 					else
 						tinsert(t,"* " .. i .. " -> " .. j)
 					end
@@ -509,6 +509,8 @@ do
 
 		local t = {}
 
+		tinsert(t,"\nMount Changes:\n")
+
 		-- Handle Default Transfers
 		local defaultlist = nil
 		local changelist = nil
@@ -524,6 +526,11 @@ do
 		for k,l in pairs(defaultlist) do
 			local omount = GetSpellInfo(k)
 			local tmount = GetSpellInfo(l)
+			if (l == 0) then
+				tmount = "Random discontinued mount.")
+			elseif (l == 1)
+				tmount = "Random mount."
+			end
 			if (mounts[k]) then
 				tinsert(t,"* " .. omount .. " -> " .. tmount)
 			else
@@ -535,6 +542,11 @@ do
 		for k,l in pairs(changelist) do
 			local omount = GetSpellInfo(k)
 			local tmount = GetSpellInfo(l)
+			if (l == 0) then
+				tmount = "Random discontinued mount.")
+			elseif (l == 1)
+				tmount = "Random mount."
+			end
 			if (mounts[k]) then
 				if (MOUNT_RACE[ORace][TRace][k]) then
 					tmount = GetSpellInfo(MOUNT_RACE[ORace][TRace][k])
