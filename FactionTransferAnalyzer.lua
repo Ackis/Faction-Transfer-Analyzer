@@ -46,6 +46,9 @@ local addon = LibStub("AceAddon-3.0"):GetAddon(MODNAME)
 local BFAC = LibStub("LibBabble-Faction-3.0"):GetLookupTable()
 local BRACE = LibStub("LibBabble-Race-3.0"):GetLookupTable()
 
+-- Frame we use for viewing the output
+addon.DisplayFrame = nil
+
 local tinsert = table.insert
 local tconcat = table.concat
 local twipe = table.wipe
@@ -57,6 +60,7 @@ function addon:OnInitialize()
 
 end
 
+-- Rep Scanning Stuff
 do
 
 	local GetNumFactions = GetNumFactions
@@ -127,6 +131,7 @@ local RaceListAlliance = {
 	["ne"] = BFAC["Darnassus"], -- People are lazy and NightElf is too long to type
 }
 
+-- Faction Stuff
 do
 
 	-- Horde factions which change based on the race combination
@@ -176,8 +181,6 @@ do
 	}
 
 	function addon:ParseReps(RepTable, DefaultFactionTable, ChangeFactionTable, OFaction, TFaction)
-	self:Print("Current race: " .. OFaction)
-	self:Print("Target race: " .. TFaction)
 		local t = {}
 
 		-- Parse all the reps that we have
@@ -211,25 +214,19 @@ do
 		local playerFaction = UnitFactionGroup("player")
 		local RepTable = {}
 
-		if ((RaceListHorde[TFaction]) and (RaceListHorde[OFaction])) or
-		((RaceListAlliance[TFaction]) and (RaceListAlliance[OFaction])) then
-			self:Print("Error, this transfer is not currently possible (Transfers must be from one faction to the other only).")
-			return
-		end
-
 		self:ScanFactions(RepTable)
 
+		local t = {}
+
 		if (RaceListHorde[ORace]) then
-			self:Print(ORace)
 			local OFaction = RaceListHorde[ORace]
 			local TFaction = RaceListAlliance[TRace]
-			self:Print("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
+			tinsert("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
 			-- Are we part of the faction we're scanning?
 			if (playerFaction == "Horde") then
-				self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, OFaction, TFaction))
+				tinsert(t,self:ParseReps(RepTable, FACTION_DEFAULT_HORDE, FACTION_CHANGE_HORDE, OFaction, TFaction))
 			-- Scanning for opposite faction, just dump the defaults
 			else
-				local t = {}
 				for i,j in pairs(FACTION_DEFAULT_HORDE) do
 					if (j == 0) then
 						tinsert(t,"- " .. i .. " -> Removed")
@@ -240,18 +237,16 @@ do
 				for i,j in pairs(FACTION_CHANGE_HORDE) do
 					tinsert(t,"* " .. i .. " -> " .. j)
 				end
-				self:Print(tconcat(t,"\n"))
 			end
 		elseif (RaceListAlliance[ORace]) then
 			local OFaction = RaceListAlliance[ORace]
 			local TFaction = RaceListHorde[TRace]
-			self:Print("Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
+			tinsert(t,"Displaying transfer changes from " .. ORace .. " (" .. OFaction .. ") to " .. TRace .. " (" .. TFaction .. ").")
 			-- Are we part of the faction we're scanning?
 			if (playerFaction == "Alliance") then
-				self:Print(self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE, OFaction, TFaction))
+				tinsert(t,self:ParseReps(RepTable, FACTION_DEFAULT_ALLIANCE, FACTION_CHANGE_ALLIANCE, OFaction, TFaction))
 			-- Scanning for opposite faction, just dump the defaults
 			else
-				local t = {}
 				for i,j in pairs(FACTION_DEFAULT_ALLIANCE) do
 					if (j == 0) then
 						tinsert(t,"- " .. i .. " -> Removed")
@@ -262,21 +257,16 @@ do
 				for i,j in pairs(FACTION_CHANGE_ALLIANCE) do
 					tinsert(t,"* " .. i .. " -> " .. j)
 				end
-				self:Print(tconcat(t,"\n"))
 			end
 		end
+
+		return tconcat(t,"\n")
 
 	end
 
 end --end-do
 
-function addon:ScanCharacter(TFaction, OFaction)
-
-	self:ScanRep(TFaction, OFaction)
-	self:ScanMounts(TFaction, OFaction)
-
-end
-
+-- Mount Stuff
 do
 
 	-- Alliance mounts which change based on the race combination
@@ -562,10 +552,55 @@ do
 			end
 		end
 
-		self:Print(table.concat(t,"\n"))
+		return t
+
 	end
 
 end --end-do
+
+-- GUI Stuff
+function addon:DisplayTextDump(textdump)
+
+	-- If we haven't created these frames, then lets do so now.
+	if (not addon.DisplayFrame) then
+		addon.DisplayFrame = CreateFrame("Frame", "DisplayFrame", UIParent)
+		tinsert(UISpecialFrames, "DisplayFrame")
+		addon.DisplayFrame:SetBackdrop(PaneBackdrop)
+		addon.DisplayFrame:SetBackdropColor(0,0,0,1)
+		addon.DisplayFrame:SetWidth(750)
+		addon.DisplayFrame:SetHeight(400)
+		addon.DisplayFrame:SetPoint("CENTER", UIParent, "CENTER")
+		addon.DisplayFrame:SetFrameStrata("DIALOG")
+		
+		local scrollArea = CreateFrame("ScrollFrame", "FTAScroll", addon.DisplayFrame, "UIPanelScrollFrameTemplate")
+		scrollArea:SetPoint("TOPLEFT", addon.DisplayFrame, "TOPLEFT", 8, -30)
+		scrollArea:SetPoint("BOTTOMRIGHT", addon.DisplayFrame, "BOTTOMRIGHT", -30, 8)
+		
+		addon.DisplayFrame.editBox = CreateFrame("EditBox", "FTAEdit", addon.DisplayFrame)
+		addon.DisplayFrame.editBox:SetMultiLine(true)
+		addon.DisplayFrame.editBox:SetMaxLetters(99999)
+		addon.DisplayFrame.editBox:EnableMouse(true)
+		addon.DisplayFrame.editBox:SetAutoFocus(true)
+		addon.DisplayFrame.editBox:SetFontObject(ChatFontNormal)
+		addon.DisplayFrame.editBox:SetWidth(650)
+		addon.DisplayFrame.editBox:SetHeight(270)
+		addon.DisplayFrame.editBox:SetScript("OnEscapePressed", function() addon.DisplayFrame:Hide() end)
+		addon.DisplayFrame.editBox:SetText(textdump)
+		addon.DisplayFrame.editBox:HighlightText(0)
+		
+		scrollArea:SetScrollChild(addon.DisplayFrame.editBox)
+		
+		local close = CreateFrame("Button", nil, addon.DisplayFrame, "UIPanelCloseButton")
+		close:SetPoint("TOPRIGHT", addon.DisplayFrame, "TOPRIGHT")
+		
+		addon.DisplayFrame:Show()
+	else
+		addon.DisplayFrame.editBox:SetText(textdump)
+		addon.DisplayFrame.editBox:HighlightText(0)
+		addon.DisplayFrame:Show()
+	end
+
+end
 
 function addon:SlashHandler(input)
 
@@ -592,5 +627,23 @@ Acceptible races are: Orc, Troll, Tauren, BloodElf, Undead, Gnome, Human, NightE
 		end
 			self:ScanCharacter(TFaction, OFaction)
 	end
+
+end
+
+function addon:ScanCharacter(TFaction, OFaction)
+
+	-- See if we can do this scan
+	if ((RaceListHorde[TRace]) and (RaceListHorde[OFaction])) or
+	((RaceListAlliance[TFaction]) and (RaceListAlliance[OFaction])) then
+		self:Print("Error, this transfer is not currently possible (Transfers must be from one faction to the other only).")
+		return
+	end
+
+	local rep = self:ScanRep(TFaction, OFaction)
+	local mounts = self:ScanMounts(TFaction, OFaction)
+
+	local results = rep .. mounts
+
+	self:DisplayTextDump(results)
 
 end
