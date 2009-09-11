@@ -249,7 +249,7 @@ do
 			else
 				for i,j in pairs(FACTION_DEFAULT_ALLIANCE) do
 					if (j == 0) then
-						tinsert(t,"cffff0000- " .. i .. " -> Removed|r")
+						tinsert(t,"|cffff0000- " .. i .. " -> Removed|r")
 					else
 						tinsert(t,"* " .. i .. " -> " .. j)
 					end
