@@ -466,6 +466,29 @@ do
 				[22724] = 22720,
 			},           
 			[gnome] = {
+				[18990] = 6777,
+				[18989] = 6898,
+				[64657] = 6899,
+				[23249] = 23239,
+				[23248] = 23240,
+				[23247] = 23238,
+				[18991] = 17461,
+				[18992] = 17460,
+				[63641] = 63636,
+				[65641] = 65643,
+				[22718] = 22720,
+				[8395] = 33630,
+				[10796] = 17453,
+				[10799] = 10873,
+				[1] = 	17454,
+				[23241] = 23225,
+				[23242] = 23223,
+				[23243] = 23222,
+				[16084] = 15779,
+				[17450] = 17459,
+				[63635] = 63638,
+				[65644] = 65642,
+				[22721] = 22719,
 			},
 		},
 		[human] = {
@@ -498,6 +521,52 @@ do
 		},
 		[gnome] = {
 			[troll] = {
+				[6777] = 18990,
+				[6898] = 18989,
+				[6899] = 64657,
+				[23239] = 23249,
+				[23240] = 23248,
+				[23238] = 23247,
+				[17461] = 18991,
+				[17460] = 18992,
+				[63636] = 63641,
+				[65643] = 65641,
+				[22720] = 22718,
+				[33630] = 8395,
+				[17453] = 10796,
+				[10873] = 10799,
+				[17454] = 1,
+				[23225] = 23241,
+				[23223] = 23242,
+				[23222] = 23243,
+				[15779] = 16084,
+				[17459] = 17450,
+				[63638] = 63635,
+				[65642] = 65644,
+				[22719] = 22721,
+Gray Ram		Brown Kodo
+White Ram		Gray Kodo
+Brown Ram		White Kodo
+Swift Gray Ram		Great Brown Kodo
+Swift White Ram		Great Gray Kodo
+Swift Brown Ram		Great White Kodo
+Black Ram		Green Kodo
+Frost Ram		Teal Kodo
+Ironforge Ram		Thunder Bluff Kodo
+Swift Violet Ram		Great Golden Kodo
+Black War Ram		Black War Kodo
+Blue Mechanostrider		Emerald Raptor
+Green Mechanostrider		Turquoise Raptor
+Red Mechanostrider		Violet Raptor
+Unpainted Mechanostrider		** Random Mount
+Swift Green Mechanostrider		Swift Blue Raptor
+Swift White Mechanostrider		Swift Olive Raptor
+Swift Yellow Mechanostrider		Swift Orange Raptor
+Icy Blue Mechanostrider Mod A		Mottled Red Raptor
+White Mechanostrider Mod B		Ivory Raptor
+Gnomeregan Mechanostrider		Darkspear Raptor
+Turbostrider		Swift Purple Raptor
+Black Battlestrider		Black War Raptor
 			},
 		}
 	}
