@@ -544,6 +544,29 @@ do
 				[22721] = 22719,
 			},
 			[draenei] = {
+				[35022] = 18990,
+				[35020] = 18989,
+				[34795] = 64657,
+				[35018] = 1,
+				[35025] = 23249,
+				[35027] = 23248,
+				[33660] = 23247,
+				[0] = 18991,
+				[0] = 18992,
+				[63642] = 63641,
+				[65639] = 65641,
+				[35028] = 22718,
+				[8395] = 34406,
+				[10796] = 35710,
+				[10799] = 35711,
+				[23241] = 35713,
+				[23242] = 35712,
+				[23243] = 35714,
+				[16084] = 0,
+				[17450] = 0,
+				[63635] = 63639,
+				[65644] = 65637,
+				[22721] = 48027,
 			},
 		},
 		[human] = {
@@ -599,29 +622,6 @@ do
 				[63638] = 63635,
 				[65642] = 65644,
 				[22719] = 22721,
-Gray Ram		Brown Kodo
-White Ram		Gray Kodo
-Brown Ram		White Kodo
-Swift Gray Ram		Great Brown Kodo
-Swift White Ram		Great Gray Kodo
-Swift Brown Ram		Great White Kodo
-Black Ram		Green Kodo
-Frost Ram		Teal Kodo
-Ironforge Ram		Thunder Bluff Kodo
-Swift Violet Ram		Great Golden Kodo
-Black War Ram		Black War Kodo
-Blue Mechanostrider		Emerald Raptor
-Green Mechanostrider		Turquoise Raptor
-Red Mechanostrider		Violet Raptor
-Unpainted Mechanostrider		** Random Mount
-Swift Green Mechanostrider		Swift Blue Raptor
-Swift White Mechanostrider		Swift Olive Raptor
-Swift Yellow Mechanostrider		Swift Orange Raptor
-Icy Blue Mechanostrider Mod A		Mottled Red Raptor
-White Mechanostrider Mod B		Ivory Raptor
-Gnomeregan Mechanostrider		Darkspear Raptor
-Turbostrider		Swift Purple Raptor
-Black Battlestrider		Black War Raptor
 			},
 		},
 		[nightelf] = {
@@ -654,32 +654,30 @@ Black Battlestrider		Black War Raptor
 		},
 		[draenei] = {
 			[troll] = {
-			},
---[[
-Gray Ram		Black Hawkstrider
-White Ram		Blue Hawkstrider
-Brown Ram		Red Hawkstrider
-** Random Mount		Purple Hawkstrider
-Swift Gray Ram		Swift Green Hawkstrider
-Swift White Ram		Swift Purple Hawkstrider
-Swift Brown Ram		Swift Pink Hawkstrider
-Black Ram		* Random Discontinued Epic Mount
-Frost Ram		* Random Discontinued Epic Mount
-Ironforge Ram		Silvermoon Hawkstrider
-Swift Violet Ram		Swift Red Hawkstrider
-Black War Ram		Swift Warstrider
-Brown Elekk		Emerald Raptor
-Gray Elekk		Turquoise Raptor
-Purple Elekk		Violet Raptor
-Great Blue Elekk		Swift Blue Raptor
-Great Green Elekk		Swift Olive Raptor
-Great Purple Elekk		Swift Orange Raptor
-* Random Discontinued Epic Mount		Mottled Red Raptor
-* Random Discontinued Epic Mount		Ivory Raptor
-Exodar Elekk		Darkspear Raptor
-Great Red Elekk		Swift Purple Raptor
-Black War Elekk		Black War Raptor
-]]--
+				[18990] = 35022,
+				[18989] = 35020,
+				[64657] = 34795,
+				[1] = 35018,
+				[23249] = 35025,
+				[23248] = 35027,
+				[23247] = 33660,
+				[18991] = 0,
+				[18992] = 0,
+				[63641] = 63642,
+				[65641] = 65639,
+				[22718] = 35028,
+				[34406] = 8395,
+				[35710] = 10796,
+				[35711] = 10799,
+				[35713] = 23241,
+				[35712] = 23242,
+				[35714] = 23243,
+				[0] =     16084,
+				[0] =     17450,
+				[63639] = 63635,
+				[65637] = 65644,
+				[48027] = 22721,
+			},            
 		},
 	}
 
