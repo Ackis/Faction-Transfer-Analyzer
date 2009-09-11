@@ -719,7 +719,7 @@ do
 			local tmount = GetSpellInfo(l)
 			if (l == 0) then
 				tmount = "Random discontinued mount."
-			elseif (l == 1)
+			elseif (l == 1) then
 				tmount = "Random mount."
 			end
 			if (mounts[k]) then
@@ -735,7 +735,7 @@ do
 			local tmount = GetSpellInfo(l)
 			if (l == 0) then
 				tmount = "Random discontinued mount."
-			elseif (l == 1)
+			elseif (l == 1) then
 				tmount = "Random mount."
 			end
 			if (mounts[k]) then
