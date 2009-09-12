@@ -768,7 +768,10 @@ local PaneBackdrop  = {
 	insets = { left = 3, right = 3, top = 5, bottom = 3 }
 }
 
--- GUI Stuff
+--- Creates a new frame with the contents of a text dump so you can copy and paste
+-- Code borrowed from Antiarc (Chatter) with permission
+-- @name FactionTransferAnalyzer:DisplayTextDump
+-- @param textdump The text to be dumped
 function addon:DisplayTextDump(textdump)
 
 	-- If we haven't created these frames, then lets do so now.
