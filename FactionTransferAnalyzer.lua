@@ -761,6 +761,13 @@ do
 
 end --end-do
 
+local PaneBackdrop  = {
+	bgFile = [[Interface\DialogFrame\UI-DialogBox-Background]],
+	edgeFile = [[Interface\DialogFrame\UI-DialogBox-Border]],
+	tile = true, tileSize = 16, edgeSize = 16,
+	insets = { left = 3, right = 3, top = 5, bottom = 3 }
+}
+
 -- GUI Stuff
 function addon:DisplayTextDump(textdump)
 
