@@ -570,6 +570,71 @@ do
 			},
 		},
 		[human] = {
+			--[orc] -- Orc is 1-1 for everything
+			[undead] = {
+				[472] = 64977,
+				[6648] = 17464,
+				[470] = 17463,
+				[23229] = 17462,
+				[23228] = 17465,
+				[16082] = 66846,
+				[23227] = 0,
+				[16083] = 0,
+				[63232] = 63643,
+				[65640] = 65645,
+				[22717] = 22722,
+				[8394] = 580,
+				[10789] = 6653,
+				[10793] = 6654,
+				[66847] = 64658,
+				[23338] = 23250,
+				[23219] = 23252,
+				[23221] = 23251,
+				[16056] = 16080,
+				[16055] = 16081,
+				[63637] = 63640,
+				[65638] = 65646,
+				[22723] = 22724,
+			},
+			[tauren] = {
+--[[
+				[472] = 
+				[6648] = 
+				[470] = 
+				[23229] = 
+				[23228] = 
+				[16082] = 
+				[23227] = 
+				[16083] = 
+				[63232] = 
+				[65640] = 
+				[22717] = 
+			},
+Pinto		Brown Kodo
+Chestnut Mare		Gray Kodo
+Brown Horse		White Kodo
+Black Stallion		** Random Mount
+Swift Brown Steed		Great Brown Kodo
+Swift White Steed		Great Gray Kodo
+Swift Palomino		Great White Kodo
+Palomino		Green Kodo
+White Stallion		Teal Kodo
+Stormwind Steed		Thunder Bluff Kodo
+Swift Gray Steed		Great Golden Kodo
+Black War Steed		Black War Kodo
+Blue Mechanostrider		Timber Wolf
+Green Mechanostrider		Dire Wolf
+Red Mechanostrider		Brown Wolf
+Unpainted Mechanostrider		Black Wolf
+Swift Green Mechanostrider		Swift Brown Wolf
+Swift White Mechanostrider		Swift Gray Wolf
+Swift Yellow Mechanostrider		Swift Timber Wolf
+Icy Blue Mechanostrider Mod A		Red Wolf
+White Mechanostrider Mod B		Winter Wolf
+Gnomeregan Mechanostrider		Orgrimmar Wolf
+Turbostrider		Swift Burgundy Wolf
+Black Battlestrider		Black War Wolf
+]]--
 			[troll] = {
 				[472] = 8395,
 				[6648] = 10796,
@@ -596,8 +661,54 @@ do
 				[65643] = 65646,
 				[22720] = 22724,
 			},
+			[bloodelf] = {
+--[[
+				[472] = 
+				[6648] = 
+				[470] = 
+				[23229] = 
+				[23228] = 
+				[16082] = 
+				[23227] = 
+				[16083] = 
+				[63232] = 
+				[65640] = 
+				[22717] = 
+			},
+Pinto		Black Hawkstrider
+Chestnut Mare		Blue Hawkstrider
+Brown Horse		Red Hawkstrider
+Black Stallion		Purple Hawkstrider
+Swift Brown Steed		Swift Green Hawkstrider
+Swift White Steed		Swift Purple Hawkstrider
+Swift Palomino		Swift Pink Hawkstrider
+Palomino		* Random Discontinued Epic Mount
+White Stallion		* Random Discontinued Epic Mount
+Stormwind Steed		Silvermoon Hawkstrider
+Swift Gray Steed		Swift Red Hawkstrider
+Black War Steed		Swift Warstrider
+Brown Elekk		Timber Wolf
+Gray Elekk		Dire Wolf
+Purple Elekk		Brown Wolf
+** Random Mount		Black Wolf
+Great Blue Elekk		Swift Brown Wolf
+Great Green Elekk		Swift Gray Wolf
+Great Purple Elekk		Swift Timber Wolf
+* Random Discontinued Epic Mount		Red Wolf
+* Random Discontinued Epic Mount		Winter Wolf
+Exodar Elekk		Orgrimmar Wolf
+Great Red Elekk		Swift Burgundy Wolf
+Black War Elekk		Black War Wolf
+]]--
+			[be] = {
+			},
 		},
 		[gnome] = {
+			--[orc] -- Orc is 1-1 for everything
+			[undead] = {
+			},
+			[tauren] = {
+			},
 			[troll] = {
 				[6777] = 18990,
 				[6898] = 18989,
@@ -623,8 +734,56 @@ do
 				[65642] = 65644,
 				[22719] = 22721,
 			},
+			[bloodelf] = {
+			},
+			[be] = {
+			},
 		},
 		[nightelf] = {
+			[orc] = {
+				[472] = 64977,
+				[6648] = 17464,
+				[470] = 17463,
+				[23229] = 17462,
+				[23228] = 17465,
+				[16082] = 66846,
+				[23227] = 0,
+				[16083] = 0,
+				[63232] = 63643,
+				[65640] = 65645,
+				[22717] = 22722,
+				[8394] = 580,
+				[10789] = 6653,
+				[10793] = 6654,
+				[66847] = 64658,
+				[23338] = 23250,
+				[23219] = 23252,
+				[23221] = 23251,
+				[16056] = 16080,
+				[16055] = 16081,
+				[63637] = 63640,
+				[65638] = 65646,
+				[22723] = 22724,
+			},
+			[undead] = {
+				[65638] = 0,
+				[22723] = 0,
+			},
+			[tauren] = {
+--[[
+				[8394
+				[10789
+				[10793
+				[66847
+				[23338
+				[23219
+				[16056
+				[16055
+				[63637
+				[65638
+				[22723
+]]--
+			},
 			[troll] = {
 				[64977] = 6777,
 				[17464] = 6898,
@@ -651,8 +810,31 @@ do
 				[65644] = 65638,
 				[22721] = 22723,
 			},
+			[bloodelf] = {
+--[[
+				[8394
+				[10789
+				[10793
+				[66847
+				[23338
+				[23219
+				[16056
+				[16055
+				[63637
+				[65638
+				[22723
+]]--
+			},
+			[be] = {
+			},
 		},
 		[draenei] = {
+			[orc] = {
+			},
+			[undead] = {
+			},
+			[tauren] = {
+			},
 			[troll] = {
 				[18990] = 35022,
 				[18989] = 35020,
@@ -678,6 +860,10 @@ do
 				[65637] = 65644,
 				[48027] = 22721,
 			},            
+			[bloodelf] = {
+			},
+			[be] = {
+			},
 		},
 	}
 
