@@ -225,6 +225,8 @@ do
 		self:ScanFactions(RepTable)
 
 		local t = {}
+		tinsert(t,"Please note that the information provided in this report must be considered in beta form.  I have taken all steps to ensure that the transfer information is correct, however Blizzard can change this at anytime.")
+		tinsert(t,"If you find the data to be incorrect, please submit a ticket on the project page.  All the data is pulled from: http://www.worldofwarcraft.com/info/faction-change/index.xml")
 
 		if (RaceListHorde[ORace]) then
 			local OFaction = RaceListHorde[ORace]
