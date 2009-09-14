@@ -872,6 +872,18 @@ do
 				[63637] = 
 				[65638] = 
 				[22723] = 
+				[33630] = 
+				[17453] = 
+				[10873] = 
+				[17454] = 
+				[23225] = 
+				[23223] = 
+				[23222] = 
+				[15779] = 
+				[17459] = 
+				[63638] = 
+				[65642] = 
+				[22719] = 
 Striped Frostsaber		Brown Kodo
 Spotted Frostsaber		Gray Kodo
 Striped Nightsaber		White Kodo
@@ -978,32 +990,18 @@ Black War Elekk		Red Skeletal Warhorse
 				[63232] = 63642,
 				[65640] = 65639,
 				[22717] = 35028,
-				[34406] = 
-				[35710] = 
-				[35711] = 
-				[35713] = 
-				[1] = 
-				[35712] = 
-				[35714] = 
-				[0] =     
-				[0] =     
-				[63639] = 
-				[65637] = 
-				[48027] = 
---[[            
-Brown Elekk		Timber Wolf
-Gray Elekk		Dire Wolf
-Purple Elekk		Brown Wolf
-** Random Mount		Black Wolf
-Great Blue Elekk		Swift Brown Wolf
-Great Green Elekk		Swift Gray Wolf
-Great Purple Elekk		Swift Timber Wolf
-* Random Discontinued Epic Mount		Red Wolf
-* Random Discontinued Epic Mount		Winter Wolf
-Exodar Elekk		Orgrimmar Wolf
-Great Red Elekk		Swift Burgundy Wolf
-Black War Elekk		Black War Wolf
-]]--
+				[34406] = 580,
+				[35710] = 6653,
+				[35711] = 6654,
+				[35713] = 64658,
+				[1] = 23250,
+				[35712] = 23252,
+				[35714] = 23251,
+				[0] = 16080,
+				[0] = 16081,
+				[63639] = 63640,
+				[65637] = 65646,
+				[48027] = 22724,
 			},
 			[undead] = {
 				[8394] = 35022,
@@ -1043,18 +1041,18 @@ Black War Elekk		Red Skeletal Warhorse
 ]]--
 			},
 			[tauren] = {
-				35022,
-				35020,
-				34795,
-				35018,
-				35025,
-				35027,
-				33660,
-				0,
-				0,
-				63642,
-				65639,
-				35028,
+				[33630] = 35022,
+				[17453] = 35020,
+				[10873] = 34795,
+				[17454] = 35018,
+				[23225] = 35025,
+				[23223] = 35027,
+				[23222] = 33660,
+				[15779] = 0,
+				[17459] = 0,
+				[63638] = 63642,
+				[65642] = 65639,
+				[22719] = 35028,
 				[34406] = 
 				[35710] = 
 				[35711] = 
@@ -1067,18 +1065,6 @@ Black War Elekk		Red Skeletal Warhorse
 				[65637] = 
 				[48027] = 
 --[[           
-Blue Mechanostrider		Black Hawkstrider
-Green Mechanostrider		Blue Hawkstrider
-Red Mechanostrider		Red Hawkstrider
-Unpainted Mechanostrider		Purple Hawkstrider
-Swift Green Mechanostrider		Swift Green Hawkstrider
-Swift White Mechanostrider		Swift Purple Hawkstrider
-Swift Yellow Mechanostrider		Swift Pink Hawkstrider
-Icy Blue Mechanostrider Mod A		* Random Discontinued Epic Mount
-White Mechanostrider Mod B		* Random Discontinued Epic Mount
-Gnomeregan Mechanostrider		Silvermoon Hawkstrider
-Turbostrider		Swift Red Hawkstrider
-Black Battlestrider		Swift Warstrider
 Brown Elekk		Brown Kodo
 Gray Elekk		Gray Kodo
 Purple Elekk		White Kodo
