@@ -594,54 +594,30 @@ do
 				[22720] = 22724,
 			},
 			[undead] = {
-				[6777] = 
-				[6898] = 
-				[6899] = 
-				[1] = 
-				[23239] = 
-				[23240] = 
-				[23238] = 
-				[17461] = 
-				[17460] = 
-				[63636] = 
-				[65643] = 
-				[22720] = 
-Gray Ram		Black Skeletal Horse
-White Ram		Brown Skeletal Horse
-Brown Ram		Blue Skeletal Horse
-** Random Mount		Red Skeletal Horse
-Swift Gray Ram		Green Skeletal Warhorse
-Swift White Ram		Purple Skeletal Warhorse
-Swift Brown Ram		Ochre Skeletal Warhorse
-Black Ram		* Random Discontinued Epic Mount
-Frost Ram		* Random Discontinued Epic Mount
-Ironforge Ram		Forsaken Warhorse
-Swift Violet Ram		White Skeletal Warhorse
-Black War Ram		Red Skeletal Warhorse
-Striped Frostsaber		Emerald Raptor
-Spotted Frostsaber		Turquoise Raptor
-Striped Nightsaber		Violet Raptor
-Striped Dawnsaber		** Random Mount
-Swift Stormsaber		Swift Blue Raptor
-Swift Mistsaber		Swift Olive Raptor
-Swift Frostsaber		Swift Orange Raptor
-Ancient Frostsaber		Mottled Red Raptor
-Black Nightsaber		Ivory Raptor
-Darnassian Nightsaber		Darkspear Raptor
-Swift Moonsaber		Swift Purple Raptor
-Black War Tiger		Black War Raptor
-						8395,
-                        10796,
-                        10799,
-                        1,
-                        23241,
-                        23242,
-                        23243,
-                        16084,
-                        17450,
-                        63635,
-                        65644,
-                        22721,
+				[6777] = 64977,
+				[6898] = 17464,
+				[6899] = 17463,
+				[1] = 17462,
+				[23239] = 17465,
+				[23240] = 23246,
+				[23238] = 66846,
+				[17461] = 0,
+				[17460] = 0,
+				[63636] = 63643,
+				[65643] = 65645,
+				[22720] = 22722,
+				[8394] = 8395,
+				[10789] = 10796,
+				[10793] = 10799,
+				[66847] = 1,
+				[23338] = 23241,
+				[23219] = 23242,
+				[23221] = 23243,
+				[16056] = 16084,
+				[16055] = 17450,
+				[63637] = 63635,
+				[65638] = 65644,
+				[22723] = 22721,
 			},         
 			[tauren] = {
 				[6777] = 
