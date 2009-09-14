@@ -699,10 +699,76 @@ do
 			},
 		},
 		[gnome] = {
-			--[orc] -- Orc is 1-1 for everything
+			[orc] = {
+				[472] = 18990,
+				[6648] = 18989,
+				[458] = 64657,
+				[470] = 1,
+				[23229] = 23249,
+				[23228] = 23248,
+				[16082] = 23247,
+				[23227] = 18991,
+				[16083] = 18992,
+				[63232] = 63641,
+				[65640] = 65641,
+				[22717] = 22718,
+				[33630] = 580,
+				[17453] = 6653,
+				[10873] = 6654,
+				[17454] = 64658,
+				[23225] = 23250,
+				[23223] = 23252,
+				[23222] = 23251,
+				[15779] = 16080,
+				[17459] = 16081,
+				[63638] = 63640,
+				[65642] = 65646,
+				[22719] = 22724,
+			},
 			[undead] = {
+--[[
+Striped Frostsaber		Brown Kodo
+Spotted Frostsaber		Gray Kodo
+Striped Nightsaber		White Kodo
+Striped Dawnsaber		** Random Mount
+Swift Stormsaber		Great Brown Kodo
+Swift Mistsaber		Great Gray Kodo
+Swift Frostsaber		Great White Kodo
+Ancient Frostsaber		Green Kodo
+Black Nightsaber		Teal Kodo
+Darnassian Nightsaber		Thunder Bluff Kodo
+Swift Moonsaber		Great Golden Kodo
+Black War Tiger		Black War Kodo
+				[33630] = 
+				[17453] = 
+				[10873] = 
+				[17454] = 
+				[23225] = 
+				[23223] = 
+				[23222] = 
+				[15779] = 
+				[17459] = 
+				[63638] = 
+				[65642] = 
+				[22719] = 
+Blue Mechanostrider		Black Skeletal Horse
+Green Mechanostrider		Brown Skeletal Horse
+Red Mechanostrider		Blue Skeletal Horse
+Unpainted Mechanostrider		Red Skeletal Horse
+Swift Green Mechanostrider		Green Skeletal Warhorse
+Swift White Mechanostrider		Purple Skeletal Warhorse
+Swift Yellow Mechanostrider		Ochre Skeletal Warhorse
+Icy Blue Mechanostrider Mod A		* Random Discontinued Epic Mount
+White Mechanostrider Mod B		* Random Discontinued Epic Mount
+Gnomeregan Mechanostrider		Forsaken Warhorse
+Turbostrider		White Skeletal Warhorse
+Black Battlestrider		Red Skeletal Warhorse
+]]--
 			},
 			[tauren] = {
+--[[
+Unpainted Mechanostrider		** Random Mount
+]]--
 			},
 			[troll] = {
 				[6777] = 18990,
@@ -730,6 +796,43 @@ do
 				[22719] = 22721,
 			},
 			[bloodelf] = {
+				[33630] = 
+				[17453] = 
+				[10873] = 
+				[17454] = 
+				[23225] = 
+				[23223] = 
+				[23222] = 
+				[15779] = 
+				[17459] = 
+				[63638] = 
+				[65642] = 
+				[22719] = 
+--[[        
+Blue Mechanostrider		Black Hawkstrider
+Green Mechanostrider		Blue Hawkstrider
+Red Mechanostrider		Red Hawkstrider
+Unpainted Mechanostrider		Purple Hawkstrider
+Swift Green Mechanostrider		Swift Green Hawkstrider
+Swift White Mechanostrider		Swift Purple Hawkstrider
+Swift Yellow Mechanostrider		Swift Pink Hawkstrider
+Icy Blue Mechanostrider Mod A		* Random Discontinued Epic Mount
+White Mechanostrider Mod B		* Random Discontinued Epic Mount
+Gnomeregan Mechanostrider		Silvermoon Hawkstrider
+Turbostrider		Swift Red Hawkstrider
+Black Battlestrider		Swift Warstrider
+Brown Elekk		Brown Kodo
+Gray Elekk		Gray Kodo
+Purple Elekk		White Kodo
+Great Blue Elekk		Great Brown Kodo
+Great Green Elekk		Great Gray Kodo
+Great Purple Elekk		Great White Kodo
+* Random Discontinued Epic Mount		Green Kodo
+* Random Discontinued Epic Mount		Teal Kodo
+Exodar Elekk		Thunder Bluff Kodo
+Great Red Elekk		Great Golden Kodo
+Black War Elekk		Black War Kodo
+]]--
 			},
 			[be] = {
 			},
