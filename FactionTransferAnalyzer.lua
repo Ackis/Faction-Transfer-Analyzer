@@ -645,54 +645,54 @@ do
 				[22719] = 22721,
 			},
 			[bloodelf] = {
-				[6777] = 
-				[6898] = 
-				[6899] = 
-				[1] = 
-				[23239] = 
-				[23240] = 
-				[23238] = 
-				[17461] = 
-				[17460] = 
-				[63636] = 
-				[65643] = 
-				[22720] = 
-Gray Ram		Black Hawkstrider
-White Ram		Blue Hawkstrider
-Brown Ram		Red Hawkstrider
-** Random Mount		Purple Hawkstrider
-Swift Gray Ram		Swift Green Hawkstrider
-Swift White Ram		Swift Purple Hawkstrider
-Swift Brown Ram		Swift Pink Hawkstrider
-Black Ram		* Random Discontinued Epic Mount
-Frost Ram		* Random Discontinued Epic Mount
-Ironforge Ram		Silvermoon Hawkstrider
-Swift Violet Ram		Swift Red Hawkstrider
-Black War Ram		Swift Warstrider
-Brown Elekk		Emerald Raptor
-Gray Elekk		Turquoise Raptor
-Purple Elekk		Violet Raptor
-Great Blue Elekk		Swift Blue Raptor
-Great Green Elekk		Swift Olive Raptor
-Great Purple Elekk		Swift Orange Raptor
-* Random Discontinued Epic Mount		Mottled Red Raptor
-* Random Discontinued Epic Mount		Ivory Raptor
-Exodar Elekk		Darkspear Raptor
-Great Red Elekk		Swift Purple Raptor
-Black War Elekk		Black War Raptor
-					8395,
-					10796,
-					10799,
-					23241,
-					23242,
-					23243,
-					16084,
-					17450,
-					63635,
-					65644,
-					22721,
-			},
+				[6777] = 35022,
+				[6898] = 35020,
+				[6899] = 34795,
+				[1] = 35018,
+				[23239] = 35025,
+				[23240] = 35027,
+				[23238] = 33660,
+				[17461] = 0,
+				[17460] = 0,
+				[63636] = 63642,
+				[65643] = 65639,
+				[22720] = 35028,
+				[34406] = 8395,
+				[35710] = 10796,
+				[35711] = 10799,
+				[35713] = 23241,
+				[35712] = 23242,
+				[35714] = 23243,
+				[0] = 16084,
+				[0] = 17450,
+				[63639] = 63635,
+				[65637] = 65644,
+				[48027] = 22721,
+			},  
 			[be] = {
+				[6777] = 35022,
+				[6898] = 35020,
+				[6899] = 34795,
+				[1] = 35018,
+				[23239] = 35025,
+				[23240] = 35027,
+				[23238] = 33660,
+				[17461] = 0,
+				[17460] = 0,
+				[63636] = 63642,
+				[65643] = 65639,
+				[22720] = 35028,
+				[34406] = 8395,
+				[35710] = 10796,
+				[35711] = 10799,
+				[35713] = 23241,
+				[35712] = 23242,
+				[35714] = 23243,
+				[0] = 16084,
+				[0] = 17450,
+				[63639] = 63635,
+				[65637] = 65644,
+				[48027] = 22721,
 			},
 		},
 		[nightelf] = {
@@ -778,7 +778,7 @@ Black War Elekk		Black War Raptor
 				[22721] = 22723,
 			},
 			[bloodelf] = {
-				[8394] = 335022,
+				[8394] = 35022,
 				[10789] = 35020,
 				[10793] = 34795,
 				[66847] = 35018,
@@ -802,7 +802,7 @@ Black War Elekk		Black War Raptor
 				[48027] = 22722,
 			},
 			[be] = {
-				[8394] = 335022,
+				[8394] = 35022,
 				[10789] = 35020,
 				[10793] = 34795,
 				[66847] = 35018,
