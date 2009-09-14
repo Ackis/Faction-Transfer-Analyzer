@@ -568,14 +568,176 @@ do
 		},
 		[dwarf] = {
 			[orc] = {
+				[472] = 8395,
+				[6648] = 10796,
+				[458] = 10799,
+				[470] = 1,
+				[23229] = 23241,
+				[23228] = 23242,
+				[23227] = 23243,
+				[16082] = 16084,
+				[16083] = 17450,
+				[63232] = 63635,
+				[65640] = 65644,
+				[22717] = 22721,
+				[6777] = 580,
+				[6898] = 6653,
+				[6899] = 6654,
+				[1] = 64658,
+				[23239] = 23250,
+				[23240] = 23252,
+				[23238] = 23251,
+				[17461] = 16080,
+				[17460] = 16081,
+				[63636] = 63640,
+				[65643] = 65646,
+				[22720] = 22724,
 			},
 			[undead] = {
-			},
+				[6777] = 
+				[6898] = 
+				[6899] = 
+				[1] = 
+				[23239] = 
+				[23240] = 
+				[23238] = 
+				[17461] = 
+				[17460] = 
+				[63636] = 
+				[65643] = 
+				[22720] = 
+Gray Ram		Black Skeletal Horse
+White Ram		Brown Skeletal Horse
+Brown Ram		Blue Skeletal Horse
+** Random Mount		Red Skeletal Horse
+Swift Gray Ram		Green Skeletal Warhorse
+Swift White Ram		Purple Skeletal Warhorse
+Swift Brown Ram		Ochre Skeletal Warhorse
+Black Ram		* Random Discontinued Epic Mount
+Frost Ram		* Random Discontinued Epic Mount
+Ironforge Ram		Forsaken Warhorse
+Swift Violet Ram		White Skeletal Warhorse
+Black War Ram		Red Skeletal Warhorse
+Striped Frostsaber		Emerald Raptor
+Spotted Frostsaber		Turquoise Raptor
+Striped Nightsaber		Violet Raptor
+Striped Dawnsaber		** Random Mount
+Swift Stormsaber		Swift Blue Raptor
+Swift Mistsaber		Swift Olive Raptor
+Swift Frostsaber		Swift Orange Raptor
+Ancient Frostsaber		Mottled Red Raptor
+Black Nightsaber		Ivory Raptor
+Darnassian Nightsaber		Darkspear Raptor
+Swift Moonsaber		Swift Purple Raptor
+Black War Tiger		Black War Raptor
+						8395,
+                        10796,
+                        10799,
+                        1,
+                        23241,
+                        23242,
+                        23243,
+                        16084,
+                        17450,
+                        63635,
+                        65644,
+                        22721,
+			},         
 			[tauren] = {
-			},
-			[troll] = {
+				[6777] = 
+				[6898] = 
+				[6899] = 
+				[23239] = 
+				[23240] = 
+				[23238] = 
+				[17461] = 
+				[17460] = 
+				[63636] = 
+				[65643] = 
+				[22720] = 
+Gray Ram		Brown Kodo
+White Ram		Gray Kodo
+Brown Ram		White Kodo
+Swift Gray Ram		Great Brown Kodo
+Swift White Ram		Great Gray Kodo
+Swift Brown Ram		Great White Kodo
+Black Ram		Green Kodo
+Frost Ram		Teal Kodo
+Ironforge Ram		Thunder Bluff Kodo
+Swift Violet Ram		Great Golden Kodo
+Black War Ram		Black War Kodo
+Blue Mechanostrider		Emerald Raptor
+Green Mechanostrider		Turquoise Raptor
+Red Mechanostrider		Violet Raptor
+Unpainted Mechanostrider		** Random Mount
+Swift Green Mechanostrider		Swift Blue Raptor
+Swift White Mechanostrider		Swift Olive Raptor
+Swift Yellow Mechanostrider		Swift Orange Raptor
+Icy Blue Mechanostrider Mod A		Mottled Red Raptor
+White Mechanostrider Mod B		Ivory Raptor
+Gnomeregan Mechanostrider		Darkspear Raptor
+Turbostrider		Swift Purple Raptor
+Black Battlestrider		Black War Raptor
+						8395,
+                        10796,
+                        10799,
+                        1,
+                        23241,
+                        23242,
+                        23243,
+                        16084,
+                        17450,
+                        63635,
+                        65644,
+                        22721,
 			},
 			[bloodelf] = {
+				[6777] = 
+				[6898] = 
+				[6899] = 
+				[1] = 
+				[23239] = 
+				[23240] = 
+				[23238] = 
+				[17461] = 
+				[17460] = 
+				[63636] = 
+				[65643] = 
+				[22720] = 
+Gray Ram		Black Hawkstrider
+White Ram		Blue Hawkstrider
+Brown Ram		Red Hawkstrider
+** Random Mount		Purple Hawkstrider
+Swift Gray Ram		Swift Green Hawkstrider
+Swift White Ram		Swift Purple Hawkstrider
+Swift Brown Ram		Swift Pink Hawkstrider
+Black Ram		* Random Discontinued Epic Mount
+Frost Ram		* Random Discontinued Epic Mount
+Ironforge Ram		Silvermoon Hawkstrider
+Swift Violet Ram		Swift Red Hawkstrider
+Black War Ram		Swift Warstrider
+Brown Elekk		Emerald Raptor
+Gray Elekk		Turquoise Raptor
+Purple Elekk		Violet Raptor
+Great Blue Elekk		Swift Blue Raptor
+Great Green Elekk		Swift Olive Raptor
+Great Purple Elekk		Swift Orange Raptor
+* Random Discontinued Epic Mount		Mottled Red Raptor
+* Random Discontinued Epic Mount		Ivory Raptor
+Exodar Elekk		Darkspear Raptor
+Great Red Elekk		Swift Purple Raptor
+Black War Elekk		Black War Raptor
+						8395,
+                        10796,
+                        10799,
+                        23241,
+                        23242,
+                        23243,
+                        16084,
+                        17450,
+                        63635,
+                        65644,
+                        22721,
 			},
 			[be] = {
 			},
