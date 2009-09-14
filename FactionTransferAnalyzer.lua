@@ -860,18 +860,18 @@ do
 			},
 			[tauren] = {
 --[[
-				[8394] = 
-				[10789] = 
-				[10793] = 
-				[66847] = 
-				[23338] = 
-				[23219] = 
-				[23221] = 
-				[16056] = 
-				[16055] = 
-				[63637] = 
-				[65638] = 
-				[22723] = 
+				[8394] = 18990,
+				[10789] = 18989,
+				[10793] = 64657,
+				[66847] = 1,
+				[23338] =  23249,
+				[23219] =  23248,
+				[23221] =  23247,
+				[16056] =  18991,
+				[16055] =  18992,
+				[63637] =  63641,
+				[65638] =  65641,
+				[22723] =  22718,
 				[33630] = 
 				[17453] = 
 				[10873] = 
@@ -884,18 +884,6 @@ do
 				[63638] = 
 				[65642] = 
 				[22719] = 
-Striped Frostsaber		Brown Kodo
-Spotted Frostsaber		Gray Kodo
-Striped Nightsaber		White Kodo
-Striped Dawnsaber		** Random Mount
-Swift Stormsaber		Great Brown Kodo
-Swift Mistsaber		Great Gray Kodo
-Swift Frostsaber		Great White Kodo
-Ancient Frostsaber		Green Kodo
-Black Nightsaber		Teal Kodo
-Darnassian Nightsaber		Thunder Bluff Kodo
-Swift Moonsaber		Great Golden Kodo
-Black War Tiger		Black War Kodo
 Blue Mechanostrider		Black Skeletal Horse
 Green Mechanostrider		Brown Skeletal Horse
 Red Mechanostrider		Blue Skeletal Horse
@@ -1053,30 +1041,17 @@ Black War Elekk		Red Skeletal Warhorse
 				[63638] = 63642,
 				[65642] = 65639,
 				[22719] = 35028,
-				[34406] = 
-				[35710] = 
-				[35711] = 
-				[35713] = 
-				[35712] = 
-				[35714] = 
-				[0] =     
-				[0] =     
-				[63639] = 
-				[65637] = 
-				[48027] = 
---[[           
-Brown Elekk		Brown Kodo
-Gray Elekk		Gray Kodo
-Purple Elekk		White Kodo
-Great Blue Elekk		Great Brown Kodo
-Great Green Elekk		Great Gray Kodo
-Great Purple Elekk		Great White Kodo
-* Random Discontinued Epic Mount		Green Kodo
-* Random Discontinued Epic Mount		Teal Kodo
-Exodar Elekk		Thunder Bluff Kodo
-Great Red Elekk		Great Golden Kodo
-Black War Elekk		Black War Kodo
-]]--
+				[34406] = 18990,
+				[35710] = 18989,
+				[35711] = 64657,
+				[35713] = 23249,
+				[35712] = 23248,
+				[35714] = 23247,
+				[0] =     18991,
+				[0] =     18992,
+				[63639] = 63641,
+				[65637] = 65641,
+				[48027] = 22718,
 			},
 			[troll] = {
 				[18990] = 35022,
