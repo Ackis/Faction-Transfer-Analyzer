@@ -596,45 +596,31 @@ do
 				[65638] = 65646,
 				[22723] = 22724,
 			},
---[[
 			[tauren] = {
-				[472] = 
-				[6648] = 
-				[470] = 
-				[23229] = 
-				[23228] = 
-				[16082] = 
-				[23227] = 
-				[16083] = 
-				[63232] = 
-				[65640] = 
-				[22717] = 
-			},
-Pinto		Brown Kodo
-Chestnut Mare		Gray Kodo
-Brown Horse		White Kodo
-Black Stallion		** Random Mount
-Swift Brown Steed		Great Brown Kodo
-Swift White Steed		Great Gray Kodo
-Swift Palomino		Great White Kodo
-Palomino		Green Kodo
-White Stallion		Teal Kodo
-Stormwind Steed		Thunder Bluff Kodo
-Swift Gray Steed		Great Golden Kodo
-Black War Steed		Black War Kodo
-Blue Mechanostrider		Timber Wolf
-Green Mechanostrider		Dire Wolf
-Red Mechanostrider		Brown Wolf
-Unpainted Mechanostrider		Black Wolf
-Swift Green Mechanostrider		Swift Brown Wolf
-Swift White Mechanostrider		Swift Gray Wolf
-Swift Yellow Mechanostrider		Swift Timber Wolf
-Icy Blue Mechanostrider Mod A		Red Wolf
-White Mechanostrider Mod B		Winter Wolf
-Gnomeregan Mechanostrider		Orgrimmar Wolf
-Turbostrider		Swift Burgundy Wolf
-Black Battlestrider		Black War Wolf
-]]--
+				[472] = 18990,
+				[6648] = 18989,
+				[470] = 1,
+				[23229] = 23249,
+				[23228] = 23248,
+				[16082] = 23247,
+				[23227] = 18991,
+				[16083] = 18992,
+				[63232] = 63641,
+				[65640] = 65641,
+				[22717] = 22718,
+				[33630] = 580,
+				[17453] = 6653,
+				[10873] = 6654,
+				[17454] = 64658,
+				[23225] = 23250,
+				[23223] = 23252,
+				[23222] = 23251,
+				[15779] = 16080,
+				[17459] = 16081,
+				[63638] = 63640,
+				[65642] = 65646,
+				[22719] = 22724,
+			},           
 			[troll] = {
 				[472] = 8395,
 				[6648] = 10796,
