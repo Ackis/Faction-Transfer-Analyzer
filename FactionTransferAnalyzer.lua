@@ -647,46 +647,55 @@ do
 				[65643] = 65646,
 				[22720] = 22724,
 			},
---[[			[bloodelf] = {
-
-				[472] = 
-				[6648] = 
-				[470] = 
-				[23229] = 
-				[23228] = 
-				[16082] = 
-				[23227] = 
-				[16083] = 
-				[63232] = 
-				[65640] = 
-				[22717] = 
-			},
-Pinto		Black Hawkstrider
-Chestnut Mare		Blue Hawkstrider
-Brown Horse		Red Hawkstrider
-Black Stallion		Purple Hawkstrider
-Swift Brown Steed		Swift Green Hawkstrider
-Swift White Steed		Swift Purple Hawkstrider
-Swift Palomino		Swift Pink Hawkstrider
-Palomino		* Random Discontinued Epic Mount
-White Stallion		* Random Discontinued Epic Mount
-Stormwind Steed		Silvermoon Hawkstrider
-Swift Gray Steed		Swift Red Hawkstrider
-Black War Steed		Swift Warstrider
-Brown Elekk		Timber Wolf
-Gray Elekk		Dire Wolf
-Purple Elekk		Brown Wolf
-** Random Mount		Black Wolf
-Great Blue Elekk		Swift Brown Wolf
-Great Green Elekk		Swift Gray Wolf
-Great Purple Elekk		Swift Timber Wolf
-* Random Discontinued Epic Mount		Red Wolf
-* Random Discontinued Epic Mount		Winter Wolf
-Exodar Elekk		Orgrimmar Wolf
-Great Red Elekk		Swift Burgundy Wolf
-Black War Elekk		Black War Wolf
-]]--
+			[bloodelf] = {
+				[472] = 35022,
+				[6648] = 35020,
+				[470] = 34795,
+				[23229] = 35018,
+				[23228] = 35025,
+				[16082] = 35027,
+				[23227] = 33660,
+				[16083] = 0,
+				[63232] = 0,
+				[65640] = 63642,
+				[22717] = 65639,
+				[34406] = 580,
+				[35710] = 6653,
+				[35711] = 6654,
+				[35713] = 64658,
+				[1] = 23250,
+				[35712] = 23252,
+				[35714] = 23251,
+				[0] =     16080,
+				[0] =     16081,
+				[63639] = 63640,
+				[65637] = 65646,
+				[48027] = 22724,
+			},  
 			[be] = {
+				[472] = 35022,
+				[6648] = 35020,
+				[470] = 34795,
+				[23229] = 35018,
+				[23228] = 35025,
+				[16082] = 35027,
+				[23227] = 33660,
+				[16083] = 0,
+				[63232] = 0,
+				[65640] = 63642,
+				[22717] = 65639,
+				[34406] = 580,
+				[35710] = 6653,
+				[35711] = 6654,
+				[35713] = 64658,
+				[1] = 23250,
+				[35712] = 23252,
+				[35714] = 23251,
+				[0] =     16080,
+				[0] =     16081,
+				[63639] = 63640,
+				[65637] = 65646,
+				[48027] = 22724,
 			},
 		},
 		[gnome] = {
