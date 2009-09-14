@@ -911,7 +911,6 @@ do
 				[22721] = 22723,
 			},
 			[bloodelf] = {
---[[
 				[8394] = 335022,
 				[10789] = 35020,
 				[10793] = 34795,
@@ -924,30 +923,40 @@ do
 				[63637] = 63642,
 				[65638] = 65639,
                 [22723] = 35028,
-				[34406] = 
-				[35710] = 
-				[35711] = 
-				[1] = 
-				[35713] = 
-				[35712] = 
-				[35714] = 
-				[63639] = 
-				[65637] = 
-				[48027] = 
-				
-Brown Elekk		Black Skeletal Horse
-Gray Elekk		Brown Skeletal Horse
-Purple Elekk		Blue Skeletal Horse
-** Random Mount		Red Skeletal Horse
-Great Blue Elekk		Green Skeletal Warhorse
-Great Green Elekk		Purple Skeletal Warhorse
-Great Purple Elekk		Ochre Skeletal Warhorse
-Exodar Elekk		Forsaken Warhorse
-Great Red Elekk		White Skeletal Warhorse
-Black War Elekk		Red Skeletal Warhorse
-]]--
+				[34406] = 64977,
+				[35710] = 17464,
+				[35711] = 17463,
+				[1] = 17462,
+				[35713] = 17465,
+				[35712] = 23246,
+				[35714] = 66846,
+				[63639] = 63643,
+				[65637] = 65645,
+				[48027] = 22722,
 			},
 			[be] = {
+				[8394] = 335022,
+				[10789] = 35020,
+				[10793] = 34795,
+				[66847] = 35018,
+				[23338] = 35025,
+				[23219] = 35027,
+				[23221] = 33660,
+				[16056] = 0,
+				[16055] = 0,
+				[63637] = 63642,
+				[65638] = 65639,
+                [22723] = 35028,
+				[34406] = 64977,
+				[35710] = 17464,
+				[35711] = 17463,
+				[1] = 17462,
+				[35713] = 17465,
+				[35712] = 23246,
+				[35714] = 66846,
+				[63639] = 63643,
+				[65637] = 65645,
+				[48027] = 22722,
 			},
 		},
 		[draenei] = {
@@ -990,29 +999,16 @@ Black War Elekk		Red Skeletal Warhorse
 				[63637] = 63642,
 				[65638] = 65639,
 				[22723] = 35028,
-				[34406] = 
-				[35710] = 
-				[35711] = 
-				[1] = 
-				[35713] = 
-				[35712] = 
-				[35714] = 
-				[63639] = 
-				[65637] = 
-				[48027] = 
-				
---[[                     
-Brown Elekk		Black Skeletal Horse
-Gray Elekk		Brown Skeletal Horse
-Purple Elekk		Blue Skeletal Horse
-** Random Mount		Red Skeletal Horse
-Great Blue Elekk		Green Skeletal Warhorse
-Great Green Elekk		Purple Skeletal Warhorse
-Great Purple Elekk		Ochre Skeletal Warhorse
-Exodar Elekk		Forsaken Warhorse
-Great Red Elekk		White Skeletal Warhorse
-Black War Elekk		Red Skeletal Warhorse
-]]--
+				[34406] = 64977,
+				[35710] = 17464,
+				[35711] = 17463,
+				[1] = 17462,
+				[35713] = 17465,
+				[35712] = 23246,
+				[35714] = 66846,
+				[63639] = 63643,
+				[65637] = 65645,
+				[48027] = 22722,
 			},
 			[tauren] = {
 				[33630] = 35022,
