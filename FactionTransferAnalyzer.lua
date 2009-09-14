@@ -1567,7 +1567,7 @@ function addon:ScanCharacter(TFaction, OFaction)
 	local rep = self:ScanRep(TFaction, OFaction)
 	local mounts = self:ScanMounts(TFaction, OFaction)
 
-	local results = rep .. mounts
+	local results = rep .. "\n" .. mounts
 
 	self:DisplayTextDump(results)
 
