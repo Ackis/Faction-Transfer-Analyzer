@@ -620,52 +620,29 @@ do
 				[22723] = 22721,
 			},         
 			[tauren] = {
-				[6777] = 
-				[6898] = 
-				[6899] = 
-				[23239] = 
-				[23240] = 
-				[23238] = 
-				[17461] = 
-				[17460] = 
-				[63636] = 
-				[65643] = 
-				[22720] = 
-Gray Ram		Brown Kodo
-White Ram		Gray Kodo
-Brown Ram		White Kodo
-Swift Gray Ram		Great Brown Kodo
-Swift White Ram		Great Gray Kodo
-Swift Brown Ram		Great White Kodo
-Black Ram		Green Kodo
-Frost Ram		Teal Kodo
-Ironforge Ram		Thunder Bluff Kodo
-Swift Violet Ram		Great Golden Kodo
-Black War Ram		Black War Kodo
-Blue Mechanostrider		Emerald Raptor
-Green Mechanostrider		Turquoise Raptor
-Red Mechanostrider		Violet Raptor
-Unpainted Mechanostrider		** Random Mount
-Swift Green Mechanostrider		Swift Blue Raptor
-Swift White Mechanostrider		Swift Olive Raptor
-Swift Yellow Mechanostrider		Swift Orange Raptor
-Icy Blue Mechanostrider Mod A		Mottled Red Raptor
-White Mechanostrider Mod B		Ivory Raptor
-Gnomeregan Mechanostrider		Darkspear Raptor
-Turbostrider		Swift Purple Raptor
-Black Battlestrider		Black War Raptor
-						8395,
-                        10796,
-                        10799,
-                        1,
-                        23241,
-                        23242,
-                        23243,
-                        16084,
-                        17450,
-                        63635,
-                        65644,
-                        22721,
+				[6777] = 18990,
+				[6898] = 18989,
+				[6899] = 64657,
+				[23239] = 23249,
+				[23240] = 23248,
+				[23238] = 23247,
+				[17461] = 18991,
+				[17460] = 18992,
+				[63636] = 63641,
+				[65643] = 65641,
+				[22720] = 22718,
+				[33630] = 8395,
+				[17453] = 10796,
+				[10873] = 10799,
+				[17454] = 1,
+				[23225] = 23241,
+				[23223] = 23242,
+				[23222] = 23243,
+				[15779] = 16084,
+				[17459] = 17450,
+				[63638] = 63635,
+				[65642] = 65644,
+				[22719] = 22721,
 			},
 			[bloodelf] = {
 				[6777] = 
@@ -703,17 +680,17 @@ Great Purple Elekk		Swift Orange Raptor
 Exodar Elekk		Darkspear Raptor
 Great Red Elekk		Swift Purple Raptor
 Black War Elekk		Black War Raptor
-						8395,
-                        10796,
-                        10799,
-                        23241,
-                        23242,
-                        23243,
-                        16084,
-                        17450,
-                        63635,
-                        65644,
-                        22721,
+					8395,
+					10796,
+					10799,
+					23241,
+					23242,
+					23243,
+					16084,
+					17450,
+					63635,
+					65644,
+					22721,
 			},
 			[be] = {
 			},
