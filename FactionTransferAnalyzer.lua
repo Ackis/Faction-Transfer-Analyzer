@@ -572,7 +572,7 @@ do
 			[undead] = {
 				[472] = 64977,
 				[6648] = 17464,
-				[470] = 17463,
+				[470] =   17463,
 				[23229] = 17462,
 				[23228] = 17465,
 				[16082] = 66846,
@@ -859,44 +859,30 @@ do
 				[22723] = 0,
 			},
 			[tauren] = {
---[[
 				[8394] = 18990,
 				[10789] = 18989,
 				[10793] = 64657,
 				[66847] = 1,
-				[23338] =  23249,
-				[23219] =  23248,
-				[23221] =  23247,
-				[16056] =  18991,
-				[16055] =  18992,
-				[63637] =  63641,
-				[65638] =  65641,
-				[22723] =  22718,
-				[33630] = 
-				[17453] = 
-				[10873] = 
-				[17454] = 
-				[23225] = 
-				[23223] = 
-				[23222] = 
-				[15779] = 
-				[17459] = 
-				[63638] = 
-				[65642] = 
-				[22719] = 
-Blue Mechanostrider		Black Skeletal Horse
-Green Mechanostrider		Brown Skeletal Horse
-Red Mechanostrider		Blue Skeletal Horse
-Unpainted Mechanostrider		Red Skeletal Horse
-Swift Green Mechanostrider		Green Skeletal Warhorse
-Swift White Mechanostrider		Purple Skeletal Warhorse
-Swift Yellow Mechanostrider		Ochre Skeletal Warhorse
-Icy Blue Mechanostrider Mod A		* Random Discontinued Epic Mount
-White Mechanostrider Mod B		* Random Discontinued Epic Mount
-Gnomeregan Mechanostrider		Forsaken Warhorse
-Turbostrider		White Skeletal Warhorse
-Black Battlestrider		Red Skeletal Warhorse
-]]--
+				[23338] = 23249,
+				[23219] = 23248,
+				[23221] = 23247,
+				[16056] = 18991,
+				[16055] = 18992,
+				[63637] = 63641,
+				[65638] = 65641,
+				[22723] = 22718,
+				[33630] = 64977,
+				[17453] = 17464,
+				[10873] = 17463,
+				[17454] = 17462,
+				[23225] = 17465,
+				[23223] = 23246,
+				[23222] = 66846,
+				[15779] = 0,
+				[17459] = 0,
+				[63638] = 63643,
+				[65642] = 65645,
+				[22719] = 22722,
 			},
 			[troll] = {
 				[64977] = 6777,
