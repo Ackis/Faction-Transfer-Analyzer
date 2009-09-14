@@ -751,9 +751,7 @@ do
 				[22719] = 22722,
 			},
 			[tauren] = {
---[[
-Unpainted Mechanostrider		** Random Mount
-]]--
+				[17454] = 1,
 			},
 			[troll] = {
 				[6777] = 18990,
