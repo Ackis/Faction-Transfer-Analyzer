@@ -570,7 +570,6 @@ do
 			},
 		},
 		[human] = {
-			--[orc] -- Orc is 1-1 for everything
 			[undead] = {
 				[472] = 64977,
 				[6648] = 17464,
@@ -726,44 +725,30 @@ do
 				[22719] = 22724,
 			},
 			[undead] = {
---[[
-Striped Frostsaber		Brown Kodo
-Spotted Frostsaber		Gray Kodo
-Striped Nightsaber		White Kodo
-Striped Dawnsaber		** Random Mount
-Swift Stormsaber		Great Brown Kodo
-Swift Mistsaber		Great Gray Kodo
-Swift Frostsaber		Great White Kodo
-Ancient Frostsaber		Green Kodo
-Black Nightsaber		Teal Kodo
-Darnassian Nightsaber		Thunder Bluff Kodo
-Swift Moonsaber		Great Golden Kodo
-Black War Tiger		Black War Kodo
-				[33630] = 
-				[17453] = 
-				[10873] = 
-				[17454] = 
-				[23225] = 
-				[23223] = 
-				[23222] = 
-				[15779] = 
-				[17459] = 
-				[63638] = 
-				[65642] = 
-				[22719] = 
-Blue Mechanostrider		Black Skeletal Horse
-Green Mechanostrider		Brown Skeletal Horse
-Red Mechanostrider		Blue Skeletal Horse
-Unpainted Mechanostrider		Red Skeletal Horse
-Swift Green Mechanostrider		Green Skeletal Warhorse
-Swift White Mechanostrider		Purple Skeletal Warhorse
-Swift Yellow Mechanostrider		Ochre Skeletal Warhorse
-Icy Blue Mechanostrider Mod A		* Random Discontinued Epic Mount
-White Mechanostrider Mod B		* Random Discontinued Epic Mount
-Gnomeregan Mechanostrider		Forsaken Warhorse
-Turbostrider		White Skeletal Warhorse
-Black Battlestrider		Red Skeletal Warhorse
-]]--
+				[8394] = 18990,
+				[10789] = 18989,
+				[10793] = 64657,
+				[66847] = 1,
+				[23338] = 23249,
+				[23219] = 23248,
+				[23221] = 23247,
+				[16056] = 18991,
+				[16055] = 18992,
+				[63637] = 63641,
+				[65638] = 65641,
+				[22723] = 22718,
+				[33630] = 64977,
+				[17453] = 17464,
+				[10873] = 64656,
+				[17454] = 17462,
+				[23225] = 17465,
+				[23223] = 23246,
+				[23222] = 66846,
+				[15779] = 0,
+				[17459] = 0,
+				[63638] = 63643,
+				[65642] = 65645,
+				[22719] = 22722,
 			},
 			[tauren] = {
 --[[
@@ -880,6 +865,30 @@ Black War Elekk		Black War Kodo
 				[63637
 				[65638
 				[22723
+Striped Frostsaber		Brown Kodo
+Spotted Frostsaber		Gray Kodo
+Striped Nightsaber		White Kodo
+Striped Dawnsaber		** Random Mount
+Swift Stormsaber		Great Brown Kodo
+Swift Mistsaber		Great Gray Kodo
+Swift Frostsaber		Great White Kodo
+Ancient Frostsaber		Green Kodo
+Black Nightsaber		Teal Kodo
+Darnassian Nightsaber		Thunder Bluff Kodo
+Swift Moonsaber		Great Golden Kodo
+Black War Tiger		Black War Kodo
+Blue Mechanostrider		Black Skeletal Horse
+Green Mechanostrider		Brown Skeletal Horse
+Red Mechanostrider		Blue Skeletal Horse
+Unpainted Mechanostrider		Red Skeletal Horse
+Swift Green Mechanostrider		Green Skeletal Warhorse
+Swift White Mechanostrider		Purple Skeletal Warhorse
+Swift Yellow Mechanostrider		Ochre Skeletal Warhorse
+Icy Blue Mechanostrider Mod A		* Random Discontinued Epic Mount
+White Mechanostrider Mod B		* Random Discontinued Epic Mount
+Gnomeregan Mechanostrider		Forsaken Warhorse
+Turbostrider		White Skeletal Warhorse
+Black Battlestrider		Red Skeletal Warhorse
 ]]--
 			},
 			[troll] = {
@@ -921,6 +930,28 @@ Black War Elekk		Black War Kodo
 				[63637
 				[65638
 				[22723
+Striped Frostsaber		Black Hawkstrider
+Spotted Frostsaber		Blue Hawkstrider
+Striped Nightsaber		Red Hawkstrider
+Striped Dawnsaber		Purple Hawkstrider
+Swift Stormsaber		Swift Green Hawkstrider
+Swift Mistsaber		Swift Purple Hawkstrider
+Swift Frostsaber		Swift Pink Hawkstrider
+Ancient Frostsaber		* Random Discontinued Epic Mount
+Black Nightsaber		* Random Discontinued Epic Mount
+Darnassian Nightsaber		Silvermoon Hawkstrider
+Swift Moonsaber		Swift Red Hawkstrider
+Black War Tiger		Swift Warstrider
+Brown Elekk		Black Skeletal Horse
+Gray Elekk		Brown Skeletal Horse
+Purple Elekk		Blue Skeletal Horse
+** Random Mount		Red Skeletal Horse
+Great Blue Elekk		Green Skeletal Warhorse
+Great Green Elekk		Purple Skeletal Warhorse
+Great Purple Elekk		Ochre Skeletal Warhorse
+Exodar Elekk		Forsaken Warhorse
+Great Red Elekk		White Skeletal Warhorse
+Black War Elekk		Red Skeletal Warhorse
 ]]--
 			},
 			[be] = {
@@ -928,10 +959,97 @@ Black War Elekk		Black War Kodo
 		},
 		[draenei] = {
 			[orc] = {
+--[[
+Pinto		Black Hawkstrider
+Chestnut Mare		Blue Hawkstrider
+Brown Horse		Red Hawkstrider
+Black Stallion		Purple Hawkstrider
+Swift Brown Steed		Swift Green Hawkstrider
+Swift White Steed		Swift Purple Hawkstrider
+Swift Palomino		Swift Pink Hawkstrider
+Palomino		* Random Discontinued Epic Mount
+White Stallion		* Random Discontinued Epic Mount
+Stormwind Steed		Silvermoon Hawkstrider
+Swift Gray Steed		Swift Red Hawkstrider
+Black War Steed		Swift Warstrider
+Brown Elekk		Timber Wolf
+Gray Elekk		Dire Wolf
+Purple Elekk		Brown Wolf
+** Random Mount		Black Wolf
+Great Blue Elekk		Swift Brown Wolf
+Great Green Elekk		Swift Gray Wolf
+Great Purple Elekk		Swift Timber Wolf
+* Random Discontinued Epic Mount		Red Wolf
+* Random Discontinued Epic Mount		Winter Wolf
+Exodar Elekk		Orgrimmar Wolf
+Great Red Elekk		Swift Burgundy Wolf
+Black War Elekk		Black War Wolf
+]]--
 			},
 			[undead] = {
+				[8394] = 
+				[10789] = 
+				[10793] = 
+				[66847] = 
+				[23338] = 
+				[23219] = 
+				[23221] = 
+				[16056] = 
+				[16055] = 
+				[63637] = 
+				[65638] = 
+				[22723] = 
+--[[        
+Striped Frostsaber		Black Hawkstrider
+Spotted Frostsaber		Blue Hawkstrider
+Striped Nightsaber		Red Hawkstrider
+Striped Dawnsaber		Purple Hawkstrider
+Swift Stormsaber		Swift Green Hawkstrider
+Swift Mistsaber		Swift Purple Hawkstrider
+Swift Frostsaber		Swift Pink Hawkstrider
+Ancient Frostsaber		* Random Discontinued Epic Mount
+Black Nightsaber		* Random Discontinued Epic Mount
+Darnassian Nightsaber		Silvermoon Hawkstrider
+Swift Moonsaber		Swift Red Hawkstrider
+Black War Tiger		Swift Warstrider
+Brown Elekk		Black Skeletal Horse
+Gray Elekk		Brown Skeletal Horse
+Purple Elekk		Blue Skeletal Horse
+** Random Mount		Red Skeletal Horse
+Great Blue Elekk		Green Skeletal Warhorse
+Great Green Elekk		Purple Skeletal Warhorse
+Great Purple Elekk		Ochre Skeletal Warhorse
+Exodar Elekk		Forsaken Warhorse
+Great Red Elekk		White Skeletal Warhorse
+Black War Elekk		Red Skeletal Warhorse
+]]--
 			},
 			[tauren] = {
+--[[
+Blue Mechanostrider		Black Hawkstrider
+Green Mechanostrider		Blue Hawkstrider
+Red Mechanostrider		Red Hawkstrider
+Unpainted Mechanostrider		Purple Hawkstrider
+Swift Green Mechanostrider		Swift Green Hawkstrider
+Swift White Mechanostrider		Swift Purple Hawkstrider
+Swift Yellow Mechanostrider		Swift Pink Hawkstrider
+Icy Blue Mechanostrider Mod A		* Random Discontinued Epic Mount
+White Mechanostrider Mod B		* Random Discontinued Epic Mount
+Gnomeregan Mechanostrider		Silvermoon Hawkstrider
+Turbostrider		Swift Red Hawkstrider
+Black Battlestrider		Swift Warstrider
+Brown Elekk		Brown Kodo
+Gray Elekk		Gray Kodo
+Purple Elekk		White Kodo
+Great Blue Elekk		Great Brown Kodo
+Great Green Elekk		Great Gray Kodo
+Great Purple Elekk		Great White Kodo
+* Random Discontinued Epic Mount		Green Kodo
+* Random Discontinued Epic Mount		Teal Kodo
+Exodar Elekk		Thunder Bluff Kodo
+Great Red Elekk		Great Golden Kodo
+Black War Elekk		Black War Kodo
+]]--
 			},
 			[troll] = {
 				[18990] = 35022,
@@ -958,10 +1076,6 @@ Black War Elekk		Black War Kodo
 				[65637] = 65644,
 				[48027] = 22721,
 			},            
-			[bloodelf] = {
-			},
-			[be] = {
-			},
 		},
 	}
 
