@@ -6,7 +6,7 @@
 ## X-Donate: http://www.wowace.com/projects/faction-transfer-analyzer/#w_donations
 
 ## Interface: 30200
-## Version: 0.2 Beta
+## Version: 0.3 Beta
 ## X-Revision: @project-revision@
 ## X-Date: @file-date-iso@
 
