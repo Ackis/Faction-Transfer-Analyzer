@@ -1,7 +1,7 @@
 ﻿==What it does
 The Faction Transfer Analyzer assists with an automatic comparison of the changes that will occur should you choose to transfer your characters factions.
 
-Blizzard has provided a detailed explaination [[http://www.worldofwarcraft.com/info/faction-change/index.xml | here]] however if you're worried about your reputations, or mounts, it may take you a long time to analyze what will occur when you transfer.  That's where this addon comes into play.  It will assist you by providing a summary of what will change based off your characters current status.
+Blizzard has provided a detailed explanation [[http://www.worldofwarcraft.com/info/faction-change/index.xml | here]] however if you're worried about your reputations, or mounts, it may take you a long time to analyze what will occur when you transfer.  That's where this addon comes into play.  It will assist you by providing a summary of what will change based off your characters current status.
 
 ===Testing Information
 Right now this mod is in testing.  As over 0.3 Beta, all the alliance -> horde transfers should be in the database.  If you notice a discrepancy please use a ticket to report it.
@@ -26,7 +26,7 @@ This mod works via slash commands only.  The main slash command is **/fta**.
 
 <<code>>/fta (Transfer Race) (Origin Race)<</code>>
 
-The slash command takes two parameters, the first being the race you wish to transfer to, the second being the race you are transfering from.  The second command is optional.
+The slash command takes two parameters, the first being the race you wish to transfer to, the second being the race you are transferring from.  The second command is optional.
 
 ===Examples
 
