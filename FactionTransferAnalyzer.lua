@@ -465,7 +465,6 @@ do
 				[65646] = 65643,
 				[22724] = 22720,
 			},
-			--[dwarf] -- Dwarf is 1-1 for everything
 			[ne] = {
 				[18990] = 64977,
 				[18989] = 17464,
@@ -779,45 +778,54 @@ do
 				[22719] = 22721,
 			},
 			[bloodelf] = {
-				[33630] = 
-				[17453] = 
-				[10873] = 
-				[17454] = 
-				[23225] = 
-				[23223] = 
-				[23222] = 
-				[15779] = 
-				[17459] = 
-				[63638] = 
-				[65642] = 
-				[22719] = 
---[[        
-Blue Mechanostrider		Black Hawkstrider
-Green Mechanostrider		Blue Hawkstrider
-Red Mechanostrider		Red Hawkstrider
-Unpainted Mechanostrider		Purple Hawkstrider
-Swift Green Mechanostrider		Swift Green Hawkstrider
-Swift White Mechanostrider		Swift Purple Hawkstrider
-Swift Yellow Mechanostrider		Swift Pink Hawkstrider
-Icy Blue Mechanostrider Mod A		* Random Discontinued Epic Mount
-White Mechanostrider Mod B		* Random Discontinued Epic Mount
-Gnomeregan Mechanostrider		Silvermoon Hawkstrider
-Turbostrider		Swift Red Hawkstrider
-Black Battlestrider		Swift Warstrider
-Brown Elekk		Brown Kodo
-Gray Elekk		Gray Kodo
-Purple Elekk		White Kodo
-Great Blue Elekk		Great Brown Kodo
-Great Green Elekk		Great Gray Kodo
-Great Purple Elekk		Great White Kodo
-* Random Discontinued Epic Mount		Green Kodo
-* Random Discontinued Epic Mount		Teal Kodo
-Exodar Elekk		Thunder Bluff Kodo
-Great Red Elekk		Great Golden Kodo
-Black War Elekk		Black War Kodo
-]]--
+				[33630] = 35022,
+				[17453] = 35020,
+				[10873] = 34795,
+				[17454] = 35018,
+				[23225] = 35025,
+				[23223] = 35027,
+				[23222] = 33660,
+				[15779] = 0,
+				[17459] = 0,
+				[63638] = 63642,
+				[65642] = 65639,
+				[22719] = 35028,
+				[34406] = 18990,
+				[35710] =  18989,
+				[35711] = 64657,
+				[35713] = 23249,
+				[35712] = 23248,
+				[35714] = 23247,
+				[0] = 18991,
+				[0] = 18992,
+				[63639] = 63641,
+				[65637] = 65641,
+				[48027] = 22718,
 			},
 			[be] = {
+				[33630] = 35022,
+				[17453] = 35020,
+				[10873] = 34795,
+				[17454] = 35018,
+				[23225] = 35025,
+				[23223] = 35027,
+				[23222] = 33660,
+				[15779] = 0,
+				[17459] = 0,
+				[63638] = 63642,
+				[65642] = 65639,
+				[22719] = 35028,
+				[34406] = 18990,
+				[35710] =  18989,
+				[35711] = 64657,
+				[35713] = 23249,
+				[35712] = 23248,
+				[35714] = 23247,
+				[0] = 18991,
+				[0] = 18992,
+				[63639] = 63641,
+				[65637] = 65641,
+				[48027] = 22718,
 			},
 		},
 		[nightelf] = {
@@ -852,17 +860,18 @@ Black War Elekk		Black War Kodo
 			},
 			[tauren] = {
 --[[
-				[8394
-				[10789
-				[10793
-				[66847
-				[23338
-				[23219
-				[16056
-				[16055
-				[63637
-				[65638
-				[22723
+				[8394] = 
+				[10789] = 
+				[10793] = 
+				[66847] = 
+				[23338] = 
+				[23219] = 
+				[23221] = 
+				[16056] = 
+				[16055] = 
+				[63637] = 
+				[65638] = 
+				[22723] = 
 Striped Frostsaber		Brown Kodo
 Spotted Frostsaber		Gray Kodo
 Striped Nightsaber		White Kodo
@@ -917,29 +926,29 @@ Black Battlestrider		Red Skeletal Warhorse
 			},
 			[bloodelf] = {
 --[[
-				[8394
-				[10789
-				[10793
-				[66847
-				[23338
-				[23219
-				[16056
-				[16055
-				[63637
-				[65638
-				[22723
-Striped Frostsaber		Black Hawkstrider
-Spotted Frostsaber		Blue Hawkstrider
-Striped Nightsaber		Red Hawkstrider
-Striped Dawnsaber		Purple Hawkstrider
-Swift Stormsaber		Swift Green Hawkstrider
-Swift Mistsaber		Swift Purple Hawkstrider
-Swift Frostsaber		Swift Pink Hawkstrider
-Ancient Frostsaber		* Random Discontinued Epic Mount
-Black Nightsaber		* Random Discontinued Epic Mount
-Darnassian Nightsaber		Silvermoon Hawkstrider
-Swift Moonsaber		Swift Red Hawkstrider
-Black War Tiger		Swift Warstrider
+				[8394] = 335022,
+				[10789] = 35020,
+				[10793] = 34795,
+				[66847] = 35018,
+				[23338] = 35025,
+				[23219] = 35027,
+				[23221] = 33660,
+				[16056] = 0,
+				[16055] = 0,
+				[63637] = 63642,
+				[65638] = 65639,
+                [22723] = 35028,
+				[34406] = 
+				[35710] = 
+				[35711] = 
+				[1] = 
+				[35713] = 
+				[35712] = 
+				[35714] = 
+				[63639] = 
+				[65637] = 
+				[48027] = 
+				
 Brown Elekk		Black Skeletal Horse
 Gray Elekk		Brown Skeletal Horse
 Purple Elekk		Blue Skeletal Horse
@@ -957,19 +966,31 @@ Black War Elekk		Red Skeletal Warhorse
 		},
 		[draenei] = {
 			[orc] = {
---[[
-Pinto		Black Hawkstrider
-Chestnut Mare		Blue Hawkstrider
-Brown Horse		Red Hawkstrider
-Black Stallion		Purple Hawkstrider
-Swift Brown Steed		Swift Green Hawkstrider
-Swift White Steed		Swift Purple Hawkstrider
-Swift Palomino		Swift Pink Hawkstrider
-Palomino		* Random Discontinued Epic Mount
-White Stallion		* Random Discontinued Epic Mount
-Stormwind Steed		Silvermoon Hawkstrider
-Swift Gray Steed		Swift Red Hawkstrider
-Black War Steed		Swift Warstrider
+				[472] = 35022,
+				[6648] = 35020,
+				[458] = 34795,
+				[470] 35018,
+				[23229] = 35025,
+				[23228] = 35027,
+				[16082] = 33660,
+				[23227] = 0,
+				[16083] = 0,
+				[63232] = 63642,
+				[65640] = 65639,
+				[22717] = 35028,
+				[34406] = 
+				[35710] = 
+				[35711] = 
+				[35713] = 
+				[1] = 
+				[35712] = 
+				[35714] = 
+				[0] =     
+				[0] =     
+				[63639] = 
+				[65637] = 
+				[48027] = 
+--[[            
 Brown Elekk		Timber Wolf
 Gray Elekk		Dire Wolf
 Purple Elekk		Brown Wolf
@@ -985,31 +1006,30 @@ Black War Elekk		Black War Wolf
 ]]--
 			},
 			[undead] = {
-				[8394] = 
-				[10789] = 
-				[10793] = 
-				[66847] = 
-				[23338] = 
-				[23219] = 
-				[23221] = 
-				[16056] = 
-				[16055] = 
-				[63637] = 
-				[65638] = 
-				[22723] = 
---[[        
-Striped Frostsaber		Black Hawkstrider
-Spotted Frostsaber		Blue Hawkstrider
-Striped Nightsaber		Red Hawkstrider
-Striped Dawnsaber		Purple Hawkstrider
-Swift Stormsaber		Swift Green Hawkstrider
-Swift Mistsaber		Swift Purple Hawkstrider
-Swift Frostsaber		Swift Pink Hawkstrider
-Ancient Frostsaber		* Random Discontinued Epic Mount
-Black Nightsaber		* Random Discontinued Epic Mount
-Darnassian Nightsaber		Silvermoon Hawkstrider
-Swift Moonsaber		Swift Red Hawkstrider
-Black War Tiger		Swift Warstrider
+				[8394] = 35022,
+				[10789] = 35020,
+				[10793] = 34795,
+				[66847] = 35018,
+				[23338] = 35025,
+				[23219] = 35027,
+				[23221] = 33660,
+				[16056] = 0,
+				[16055] = 0,
+				[63637] = 63642,
+				[65638] = 65639,
+				[22723] = 35028,
+				[34406] = 
+				[35710] = 
+				[35711] = 
+				[1] = 
+				[35713] = 
+				[35712] = 
+				[35714] = 
+				[63639] = 
+				[65637] = 
+				[48027] = 
+				
+--[[                     
 Brown Elekk		Black Skeletal Horse
 Gray Elekk		Brown Skeletal Horse
 Purple Elekk		Blue Skeletal Horse
@@ -1023,7 +1043,30 @@ Black War Elekk		Red Skeletal Warhorse
 ]]--
 			},
 			[tauren] = {
---[[
+				35022,
+				35020,
+				34795,
+				35018,
+				35025,
+				35027,
+				33660,
+				0,
+				0,
+				63642,
+				65639,
+				35028,
+				[34406] = 
+				[35710] = 
+				[35711] = 
+				[35713] = 
+				[35712] = 
+				[35714] = 
+				[0] =     
+				[0] =     
+				[63639] = 
+				[65637] = 
+				[48027] = 
+--[[           
 Blue Mechanostrider		Black Hawkstrider
 Green Mechanostrider		Blue Hawkstrider
 Red Mechanostrider		Red Hawkstrider
