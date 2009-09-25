@@ -1,12 +1,12 @@
 ## Title: Faction Transfer Analyzer
-## Notes: Assist you with faction transfers letting you know which mounts, spells, etc you have and what they will be swapped to.
+## Notes: Assist you with faction transfers letting you know which factions and mounts you have and what they will be swapped to.
 
 ## Author: Ackis
 ## eMail: ackis AT shaw DOT ca
 ## X-Donate: http://www.wowace.com/projects/faction-transfer-analyzer/#w_donations
 
 ## Interface: 30200
-## Version: 0.3 Beta
+## Version: 0.4 Beta
 ## X-Revision: @project-revision@
 ## X-Date: @file-date-iso@
 
